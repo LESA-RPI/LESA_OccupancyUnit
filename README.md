@@ -4,6 +4,10 @@ Based on STM's BLE_MeshLightingPRFNode example, this project gets data from the 
 
 
 
+// TODO: Add file structure
+
+// TODO: Add set up tutorial
+
 
 
 
