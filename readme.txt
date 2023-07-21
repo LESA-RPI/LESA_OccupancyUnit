@@ -280,15 +280,18 @@ For more details refer to the Application Note:
  
  
  
+ reference:
+https://wiki.st.com/stm32mcu/wiki/Connectivity:STM32WB_BLE_MESH_Sensor_Model#/media/File:Connectivity_sensor-demo12.png
  
  
- Important Files
- 
- 
-- BLE_MeshLightingPRFNode/STM32_WPAN/app/mesh_cfg_usr.h          user configurable settings 
- 																Set sensor client/server
+- BLE_MeshLightingPRFNode/STM32_WPAN/app/mesh_cfg_usr.h         User configurable settings 
+ 																Set sensor client/server in following
+			 																
+			#define ENABLE_SENSOR_MODEL_SERVER                                           (1)
+			#define ENABLE_SENSOR_MODEL_CLIENT                                           (0)
+
  																
-- BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_mesh.c            User Application file 
+- BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_mesh.c           User Application file 
 																Set button click actions
 																
 																
@@ -296,9 +299,18 @@ For more details refer to the Application Note:
  
 - BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_sensor.c          Application interface for Sensor Mesh Models 
 																Appli_Sensor_Init to initialize all the sensors
+																Appli_Sensor_ReadValue to read the sensor data
+																Sensor_Get to 
  
  
  
+- BLE_MeshLightingPRFNode/Core/Src/stm32wbxx_nucleo_bus.c		I2C init
+ 
+	ToF L8 files:
+- BLE_MeshLightingPRFNode/Core/Src/app_tof.c
+  BLE_MeshLightingPRFNode/Core/Inc/app_tof.h 					 High Level Api functions
+  
+- BLE_MeshLightingPRFNode/STM32CubeIDE/Drivers/BSP/vl53l8cx      Essential drivers stuff
  
  
  
