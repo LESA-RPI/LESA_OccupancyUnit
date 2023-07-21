@@ -1,0 +1,14 @@
+sensors_client.c:85:14:SensorsClient_Descriptor_Get	4
+sensors_client.c:137:14:SensorsClient_Cadence_Get	3
+sensors_client.c:181:14:SensorsClient_Cadence_Set	2
+sensors_client.c:222:14:SensorsClient_Cadence_Set_Unack	2
+sensors_client.c:262:14:SensorsClient_Settings_Get	2
+sensors_client.c:299:14:SensorsClient_Setting_Get	2
+sensors_client.c:338:14:SensorsClient_Setting_Set	2
+sensors_client.c:380:14:SensorsClient_Setting_Set_Unack	2
+sensors_client.c:420:14:SensorsClient_Get	3
+sensors_client.c:465:14:SensorsClient_Column_Get	2
+sensors_client.c:505:14:SensorsClient_Series_Get	2
+sensors_client.c:545:14:SensorsModelClient_GetOpcodeTableCb	1
+sensors_client.c:568:14:SensorsModelClient_GetStatusRequestCb	1
+sensors_client.c:596:14:SensorsModelClient_ProcessMessageCb	10

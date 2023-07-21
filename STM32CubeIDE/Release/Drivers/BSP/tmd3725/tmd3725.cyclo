@@ -1,0 +1,8 @@
+tmd3725.c:15:9:get_data	3
+tmd3725.c:45:9:set_atime	2
+tmd3725.c:69:9:set_cfg1	5
+tmd3725.c:112:9:enable_sensor	4
+tmd3725.c:149:9:get_optics_data	1
+tmd3725.c:200:12:get_raw_color	2
+tmd3725.c:229:6:print_color	1
+tmd3725.c:242:9:begin	1

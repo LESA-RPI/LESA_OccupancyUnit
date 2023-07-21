@@ -1,0 +1,8 @@
+../Drivers/BSP/tmd3725/tmd3725.c:15:9:get_data	160	static
+../Drivers/BSP/tmd3725/tmd3725.c:45:9:set_atime	8	static
+../Drivers/BSP/tmd3725/tmd3725.c:69:9:set_cfg1	8	static
+../Drivers/BSP/tmd3725/tmd3725.c:112:9:enable_sensor	8	static
+../Drivers/BSP/tmd3725/tmd3725.c:149:9:get_optics_data	16	static
+../Drivers/BSP/tmd3725/tmd3725.c:200:12:get_raw_color	16	static
+../Drivers/BSP/tmd3725/tmd3725.c:229:6:print_color	56	static
+../Drivers/BSP/tmd3725/tmd3725.c:242:9:begin	16	static

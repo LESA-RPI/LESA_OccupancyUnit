@@ -1,0 +1,7 @@
+C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/mesh/MeshModel/Src/generic_client.c:864:14:Generic_Client_OnOff_Status	32	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/mesh/MeshModel/Src/generic_client.c:892:14:Generic_Client_Level_Status	32	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/mesh/MeshModel/Src/generic_client.c:913:14:Generic_Client_DefaultTransitionTime_Status	32	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/mesh/MeshModel/Src/generic_client.c:935:14:Generic_Client_PowerOnOff_Status	32	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/mesh/MeshModel/Src/generic_client.c:953:14:GenericModelClient_GetOpcodeTableCb	16	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/mesh/MeshModel/Src/generic_client.c:975:14:GenericModelClient_GetStatusRequestCb	24	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/mesh/MeshModel/Src/generic_client.c:1003:14:GenericModelClient_ProcessMessageCb	48	static

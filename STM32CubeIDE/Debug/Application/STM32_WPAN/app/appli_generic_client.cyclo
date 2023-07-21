@@ -1,0 +1,4 @@
+appli_generic_client.c:59:14:Appli_Generic_OnOff_Status	5
+appli_generic_client.c:142:14:Appli_Generic_DefaultTransitionTime_Status	1
+appli_generic_client.c:162:14:Appli_Generic_PowerOnOff_Status	3
+appli_generic_client.c:187:14:Appli_GenericClient_API	1

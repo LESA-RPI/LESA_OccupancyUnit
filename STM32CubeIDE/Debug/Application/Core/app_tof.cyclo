@@ -1,0 +1,13 @@
+app_tof.c:70:6:MX_TOF_Init	1
+app_tof.c:108:6:MX_TOF_Process	1
+app_tof.c:121:13:MX_VL53L8CX_SimpleRanging_Init	2
+app_tof.c:137:13:MX_VL53L8CX_SimpleRanging_Process	4
+app_tof.c:162:6:MX_TOF_ToggleReso	1
+app_tof.c:168:6:print_result	7
+app_tof.c:237:13:toggle_resolution	5
+app_tof.c:267:13:toggle_signal_and_ambient	1
+app_tof.c:278:13:clear_screen	1
+app_tof.c:284:13:display_commands_banner	1
+app_tof.c:303:13:handle_cmd	5
+app_tof.c:326:16:get_key	1
+app_tof.c:335:17:com_has_data	1

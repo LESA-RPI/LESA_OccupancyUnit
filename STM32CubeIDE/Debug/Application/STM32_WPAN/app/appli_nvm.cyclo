@@ -1,0 +1,10 @@
+stm32wbxx_ll_system.h:2162:26:LL_FLASH_IsActiveFlag_OperationSuspended	2
+appli_nvm.c:141:14:AppliNvm_FlashProgram	6
+appli_nvm.c:183:14:AppliNvm_MarkSubpageInvalid	1
+appli_nvm.c:238:14:AppliNvm_FactorySettingReset	1
+appli_nvm.c:353:14:AppliNvm_SaveModelState	1
+appli_nvm.c:387:14:AppliNvm_ClearModelState	1
+appli_nvm.c:449:14:AppliNvm_LoadModelState	1
+appli_nvm.c:498:6:AppliNvm_Process	10
+appli_nvm.c:609:6:AppliNvm_SaveMessageParam	1
+appli_nvm.c:623:14:AppliNvm_FindFirstEmptyPage	4

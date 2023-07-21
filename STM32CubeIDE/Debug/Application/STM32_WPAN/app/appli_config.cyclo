@@ -1,0 +1,15 @@
+appli_config.c:50:6:Appli_GetAppKeyAddParamsCb	3
+appli_config.c:75:6:Appli_GetAppKeyDeleteParamsCb	1
+appli_config.c:88:6:Appli_GetAppKeyListParamsCb	3
+appli_config.c:111:6:Appli_GetAppKeyUpdateParamsCb	3
+appli_config.c:138:6:Appli_GetNetKeyAddParamsCb	3
+appli_config.c:163:6:Appli_GetNetKeyDeleteParamsCb	1
+appli_config.c:175:6:Appli_GetNetKeyListParamsCb	2
+appli_config.c:193:6:Appli_GetNetKeyUpdateParamsCb	3
+appli_config.c:217:6:Appli_GetAppKeyBindingParamsCb	1
+appli_config.c:229:6:Appli_GetAppKeyUnBindingParamsCb	1
+appli_config.c:243:6:Appli_GetSubAddParamsCb	2
+appli_config.c:268:6:Appli_GetSubDeleteParamsCb	3
+appli_config.c:300:6:Appli_GetSubOverwriteParamsCb	2
+appli_config.c:326:6:Appli_GetPublicationSetParamsCb	2
+appli_config.c:341:6:Appli_GetPublicationGetParamsCb	1
