@@ -18,7 +18,9 @@ VALUES (0, 0, 0, 0, 0, 0.5, 90, 150, 0.01, 0.01, 0.01, '2023-04-24 05:04:32', '2
 // Set the New york time as default timezone
 date_default_timezone_set('America/New_York');
 
-echo "php file called";
+
+
+//echo "php file called";
 
 //if statement checks isset (if SID != NULL), if there IS a sensor ID 
 if(isset($_GET["Color"])) {
@@ -28,6 +30,7 @@ if(isset($_GET["Color"])) {
    $ToF = $_GET["ToF"];
    $Color = $_GET["Color"];
    $Time_Captured = $_GET["Time_Captured"];
+   $ESP_Addr = $_GET['ESP_Addr'];
   
    /* For testing on own laptop： 
    $servername = "localhost";
@@ -50,8 +53,8 @@ if(isset($_GET["Color"])) {
       //prints message and terminates the script
       die("MySQL connection failed: " . $connection->connect_error);
    }
-   echo "MySQL connected";
-   $ESP_Addr = $_SERVER['REMOTE_ADDR'];
+   //echo "MySQL connected";
+   
 //changed "occupancy.sensor_data" to "occupancy.sensor_data23" for new variables
    $sql = "INSERT INTO occupancy.Color_ToF_Matrix (ESP_Addr,ToF,Color,Time_Captured,Time_Logged) VALUES ('$ESP_Addr','$ToF', '$Color', '$Time_Captured', $date);";
 
