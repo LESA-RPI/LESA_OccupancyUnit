@@ -16,6 +16,7 @@
 // REPLACE with your Domain name and URL path or IP address with path
 #define Host_Name "http://mdl-vm11.eng.rpi.edu"
 #define Path_Name "/sendToDatabase_Summer.php"
+// TODO: CHANGE SSID HERE
 #define Wifi_SSid "NETGEAR"
 #define Wifi_password ""
 // Time related
@@ -35,11 +36,10 @@ const char* Time_Zone = "CST6CDT,M3.2.0,M11.1.0";  // TimeZone rule for Europe/R
 ////////////////////////Global variables//////////////////////////////////////////////////////////////////////////////
 uint8_t data[6 + 128];  //RAW data get from STM32, (low byte + high byte), arranged in this order: XYZ,cell 1,2,3...64
 uint8_t AckByteVar;     //Listen for byte 0xFF
-HTTPClient http;
+HTTPClient http;        //Init Http
 SemaphoreHandle_t xDataAvailability = NULL;  //Semaphore Handler
 SemaphoreHandle_t WIFISetupFinished = NULL;  //Semaphore Handler
 
-uint64_t chip_id;
 
 
 
@@ -72,7 +72,9 @@ void timeavailable(struct timeval* t) {
 /////////////////////////////TASKS////////////////////////////////////////////////////////////////////////////////////
 
 void ReadFromUARTTask(void* pt) {
-  //this task reads UART
+  //
+  //this task reads UART messages and stores them in 16 bit int* data[3+64]
+  //
   Serial.print("ReadFromUARTTask created at core: ");
   Serial.println(xPortGetCoreID());
   xSemaphoreTake(xDataAvailability, 50);
@@ -87,6 +89,7 @@ void ReadFromUARTTask(void* pt) {
       xSemaphoreGive(xDataAvailability);
 //print data for debug
 #if (0)
+      //prints the data in HEX
       Serial.print("DATA:");
       for (int i = 0; i < 67; i++) {
         Serial.printf("%x|", ((uint16_t*)data)[i]);
@@ -94,44 +97,34 @@ void ReadFromUARTTask(void* pt) {
       Serial.print("\n\r");
 #endif
     }
-
-    //watchdog
+    //feed the watchdog
     TIMERG1.wdt_wprotect = TIMG_WDT_WKEY_VALUE;  // write enable
     TIMERG1.wdt_feed = 1;                        // feed dog
     TIMERG1.wdt_wprotect = 0;                    // write protect
   }
 }
 
-void PrintTask(void* pt) {
-  while (1) {
-  }
-}
-
 void WiFiTask(void* pt) {
+  //
+  //this task would run when the data ready semaphore is given
+  //
   Serial.print("WiFiTask created at core: ");
   Serial.println(xPortGetCoreID());
-
+  //Connect to wifi
   WiFi.begin(Wifi_SSid, Wifi_password);
   Serial.println("Connecting");
-
   while (WiFi.status() != WL_CONNECTED) {
     vTaskDelay(25);
     Serial.print(".");
   }
   Serial.print("\nConnected to WiFi network with IP Address: ");
   Serial.println(WiFi.localIP());
+  //Force update From NTP server. If time not ava, restart or wait
   printLocalTime();
-
   char snum[20];  //string num. only used to convert strings
-
-
   while (1) {
     //Check WiFi connection status
     if (WiFi.status() == WL_CONNECTED & xSemaphoreTake(xDataAvailability, 2)) {
-
-      gettimeofday(&tv_now, NULL);
-      time_us = (int64_t)tv_now.tv_sec * 1000000L + (int64_t)tv_now.tv_usec;
-
       //TODO: CHANGE THE FOLLOWING TO SATISFY THE REQUEST//
       //COLOR SENSOR
       String Query_String = "?Color=";
@@ -152,14 +145,8 @@ void WiFiTask(void* pt) {
       sprintf(str, "%llx", time_us);
       Query_String = Query_String + "&Time_Captured=" + str;
       Serial.println(Query_String);
-      /*    gettimeofday(&tv_now,NULL);
-    time_us = ((uint64_t)getTime()) * 1000000+ (uint64_t)tv_now.tv_usec;
-    char snum[20];//string num. only used to convert strings
-    Serial.printf("%lu,--,%llx\n\r",getTime(),time_us);*/
       //MAC
       Query_String = Query_String+"&ESP_Addr="+WiFi.macAddress();
-
-
       //http request send
       http.begin(String(Host_Name) + String(Path_Name) + String(Query_String));  //HTTP
       int httpCode = http.GET();
@@ -190,7 +177,7 @@ void setup() {
   Serial.println(WiFi.macAddress());
   Serial.print("SETUP LOOP TASK created at core: ");
   Serial.println(xPortGetCoreID());
-
+  
   sntp_set_time_sync_notification_cb(timeavailable);
   sntp_servermode_dhcp(1);
   configTime(GMT_Offset_Sec, DaylightOffset_sec, NTP_Server1, NTP_Server2);
