@@ -177,12 +177,11 @@ void setup() {
   Serial.println(WiFi.macAddress());
   Serial.print("SETUP LOOP TASK created at core: ");
   Serial.println(xPortGetCoreID());
-  
+  //Timerinits
   sntp_set_time_sync_notification_cb(timeavailable);
   sntp_servermode_dhcp(1);
   configTime(GMT_Offset_Sec, DaylightOffset_sec, NTP_Server1, NTP_Server2);
   configTzTime(Time_Zone, NTP_Server1, NTP_Server2);
-  chip_id = ESP.getEfuseMac();
   //task create
   xTaskCreatePinnedToCore(WiFiTask,
                           "PrintTask",
