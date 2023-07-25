@@ -156,6 +156,8 @@ void WiFiTask(void* pt) {
     time_us = ((uint64_t)getTime()) * 1000000+ (uint64_t)tv_now.tv_usec;
     char snum[20];//string num. only used to convert strings
     Serial.printf("%lu,--,%llx\n\r",getTime(),time_us);*/
+      //MAC
+      Query_String = Query_String+"&ESP_Addr="+WiFi.macAddress();
 
 
       //http request send
@@ -184,6 +186,8 @@ void setup() {
   Serial.print("ESP32 Tick Period - ");
   Serial.print(portTICK_PERIOD_MS);
   Serial.println("ms");
+  Serial.print("ESP Board MAC Address:  ");
+  Serial.println(WiFi.macAddress());
   Serial.print("SETUP LOOP TASK created at core: ");
   Serial.println(xPortGetCoreID());
 
