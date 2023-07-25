@@ -10,6 +10,7 @@
 #include "sntp.h"
 //Others
 #include <String.h>
+#include <inttypes.h>
 
 ////////////////////////Defines//////////////////////////////////////////////////////////////////////////////
 // REPLACE with your Domain name and URL path or IP address with path
@@ -24,7 +25,8 @@ const char* NTP_Server2 = "time.nist.gov";
 const long GMT_Offset_Sec = -14400;
 const int DaylightOffset_sec = 3600;
 struct timeval tv_now;
-int64_t time_us;
+struct tm timeinfo;
+unsigned long long int time_us;
 
 const char* Time_Zone = "CST6CDT,M3.2.0,M11.1.0";  // TimeZone rule for Europe/Rome including daylight adjustment rules (optional)
 
@@ -35,30 +37,45 @@ uint8_t data[6 + 128];  //RAW data get from STM32, (low byte + high byte), arran
 uint8_t AckByteVar;     //Listen for byte 0xFF
 HTTPClient http;
 SemaphoreHandle_t xDataAvailability = NULL;  //Semaphore Handler
+SemaphoreHandle_t WIFISetupFinished = NULL;  //Semaphore Handler
+
+uint64_t chip_id;
 
 
 
 
 /////////////////////////////Functions////////////////////////////////////////////////////////////////////////////////////
 void printLocalTime() {
-  struct tm timeinfo;
   if (!getLocalTime(&timeinfo)) {
     Serial.println("No time available (yet)");
     return;
   }
   Serial.println(&timeinfo, "%A, %B %d %Y %H:%M:%S");
 }
+unsigned long getTime() {
+  time_t now;
+  struct tm timeinfo;
+  if (!getLocalTime(&timeinfo)) {
+    //Serial.println("Failed to obtain time");
+    return (0);
+  }
+  time(&now);
+  return now;
+}
 // Callback function (get's called when time adjusts via NTP)
 void timeavailable(struct timeval* t) {
   Serial.println("Got time adjustment from NTP!");
   printLocalTime();
+  xSemaphoreGive(WIFISetupFinished);
 }
+
 /////////////////////////////TASKS////////////////////////////////////////////////////////////////////////////////////
 
 void ReadFromUARTTask(void* pt) {
   //this task reads UART
   Serial.print("ReadFromUARTTask created at core: ");
   Serial.println(xPortGetCoreID());
+  xSemaphoreTake(xDataAvailability, 50);
   while (1) {
     while (Serial.available()) {
       Serial.readBytes(&AckByteVar, 1);
@@ -68,14 +85,14 @@ void ReadFromUARTTask(void* pt) {
       }
       Serial.readBytes(data, 6 + 128);
       xSemaphoreGive(xDataAvailability);
-      //print data for debug
-      #if (0)
+//print data for debug
+#if (0)
       Serial.print("DATA:");
       for (int i = 0; i < 67; i++) {
         Serial.printf("%x|", ((uint16_t*)data)[i]);
       }
       Serial.print("\n\r");
-      #endif
+#endif
     }
 
     //watchdog
@@ -98,12 +115,14 @@ void WiFiTask(void* pt) {
   Serial.println("Connecting");
 
   while (WiFi.status() != WL_CONNECTED) {
-    vTaskDelay(50);
+    vTaskDelay(25);
     Serial.print(".");
   }
-  Serial.print("Connected to WiFi network with IP Address: ");
+  Serial.print("\nConnected to WiFi network with IP Address: ");
   Serial.println(WiFi.localIP());
   printLocalTime();
+
+  char snum[20];  //string num. only used to convert strings
 
 
   while (1) {
@@ -114,21 +133,29 @@ void WiFiTask(void* pt) {
       time_us = (int64_t)tv_now.tv_sec * 1000000L + (int64_t)tv_now.tv_usec;
 
       //TODO: CHANGE THE FOLLOWING TO SATISFY THE REQUEST//
-      
-      String Query_String = "&Color='";
-      char snum[6];
+      //COLOR SENSOR
+      String Query_String = "?Color=";
       for (int i = 0; i < 3; i++) {
-        Query_String = Query_String + itoa(((uint16_t*)data)[i], snum, 10) + "|";
+        Query_String = Query_String + itoa(((uint16_t*)data)[i], snum, 16) + "|";
       }
-      Query_String = Query_String + "'&ToF='";
-      //TODO: ADD TOF
+      Query_String.remove(Query_String.length() - 1);
+      //TOF
+      Query_String = Query_String + "&ToF=";
       for (int i = 3; i < 67; i++) {
-        Query_String = Query_String + itoa(((uint16_t*)data)[i], snum, 10) + "|";
+        Query_String = Query_String + itoa(((uint16_t*)data)[i], snum, 16) + "|";
       }
-      char longlongtime[16];
-      Query_String = Query_String + "'&Time_Logged=" + itoa(time_us, longlongtime, 10);
+      Query_String.remove(Query_String.length() - 1);
+      //TIME STAMP
+      gettimeofday(&tv_now, NULL);
+      time_us = ((uint64_t)getTime()) * 1000000 + (uint64_t)tv_now.tv_usec;
+      char str[256];
+      sprintf(str, "%llx", time_us);
+      Query_String = Query_String + "&Time_Captured=" + str;
       Serial.println(Query_String);
-
+      /*    gettimeofday(&tv_now,NULL);
+    time_us = ((uint64_t)getTime()) * 1000000+ (uint64_t)tv_now.tv_usec;
+    char snum[20];//string num. only used to convert strings
+    Serial.printf("%lu,--,%llx\n\r",getTime(),time_us);*/
 
 
       //http request send
@@ -149,34 +176,37 @@ void WiFiTask(void* pt) {
 /////////////////////////////SET LOOP TASK////////////////////////////////////////////////////////////////////////////////////
 
 void setup() {
-  //default core is 0
+  //semaphore
+  xDataAvailability = xSemaphoreCreateBinary();
+  WIFISetupFinished = xSemaphoreCreateBinary();
+  //default core is 1
   Serial.begin(115200);
   Serial.print("ESP32 Tick Period - ");
   Serial.print(portTICK_PERIOD_MS);
   Serial.println("ms");
+  Serial.print("SETUP LOOP TASK created at core: ");
+  Serial.println(xPortGetCoreID());
 
   sntp_set_time_sync_notification_cb(timeavailable);
   sntp_servermode_dhcp(1);
   configTime(GMT_Offset_Sec, DaylightOffset_sec, NTP_Server1, NTP_Server2);
   configTzTime(Time_Zone, NTP_Server1, NTP_Server2);
-
-
-  xDataAvailability = xSemaphoreCreateBinary();
-
-  xTaskCreatePinnedToCore(ReadFromUARTTask,
-                          "ReadFromUARTTask",
-                          1024 * 10,
-                          NULL,
-                          2,
-                          NULL,
-                          1); 
+  chip_id = ESP.getEfuseMac();
+  //task create
   xTaskCreatePinnedToCore(WiFiTask,
                           "PrintTask",
                           1024 * 100,
                           NULL,
-                          2,
+                          10,
                           NULL,
                           0);
+  xTaskCreatePinnedToCore(ReadFromUARTTask,
+                          "ReadFromUARTTask",
+                          1024 * 10,
+                          NULL,
+                          10,
+                          NULL,
+                          1);
 }
 
 void loop() {
