@@ -8,6 +8,9 @@ Based on STM's BLE_MeshLightingPRFNode example, this project gets data from the 
 
 // TODO: Add set up tutorial
 
+To use this project, download the repository and open the following
+..\BLE_MeshLightingPRFNode\STM32CubeIDE\.project
+
 
 
 
