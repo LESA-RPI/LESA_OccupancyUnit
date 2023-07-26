@@ -1,0 +1,9 @@
+hw_uart.c:69:6:HW_UART_Init	2
+hw_uart.c:91:6:HW_UART_Receive_IT	2
+hw_uart.c:114:6:HW_UART_Transmit_IT	2
+hw_uart.c:137:13:HW_UART_Transmit	6
+hw_uart.c:185:13:HW_UART_Transmit_DMA	6
+hw_uart.c:237:6:HW_UART_Interrupt_Handler	2
+hw_uart.c:260:6:HW_UART_DMA_Interrupt_Handler	2
+hw_uart.c:283:6:HAL_UART_RxCpltCallback	3
+hw_uart.c:312:6:HAL_UART_TxCpltCallback	3

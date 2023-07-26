@@ -69,11 +69,11 @@
 									<listOptionValue builtIn="false" value="../../STM32_WPAN/app"/>
 									<listOptionValue builtIn="false" value="../../Middlewares/ST/STM32_WPAN/ble"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Application/Core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\STM\workspace\BLE_MeshLightingPRFNode\Drivers\BSP\Components\vl53l8cx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\STM\workspace\BLE_MeshLightingPRFNode\Drivers\BSP\Components\vl53l8cx\modules&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\STM\workspace\BLE_MeshLightingPRFNode\Drivers\BSP\Components\vl53l8cx\porting&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\STM\workspace\BLE_MeshLightingPRFNode\STM32CubeIDE\Drivers\BSP\tmd3725&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLE_MeshLightingPRFNode/Drivers/BSP/TCS3430}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLE_MeshLightingPRFNode/Drivers/BSP/vl53l8cx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLE_MeshLightingPRFNode/Drivers/BSP/vl53l8cx/modules}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLE_MeshLightingPRFNode/Drivers/BSP/vl53l8cx/porting}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLE_MeshLightingPRFNode/Drivers/BSP/tmd3725}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.721699402" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>

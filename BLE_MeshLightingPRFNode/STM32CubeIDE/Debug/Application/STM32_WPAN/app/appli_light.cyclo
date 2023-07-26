@@ -1,0 +1,14 @@
+appli_light.c:125:14:Appli_Light_Lightness_Set	5
+appli_light.c:196:14:Appli_Light_Lightness_Linear_Set	1
+appli_light.c:227:14:Appli_Light_Lightness_Default_Set	2
+appli_light.c:262:14:Appli_Light_Lightness_Last_Set	1
+appli_light.c:295:14:Appli_Light_Lightness_Range_Set	1
+appli_light.c:731:14:Appli_Light_GetLightnessStatus	1
+appli_light.c:753:14:Appli_Light_GetLightnessLinearStatus	1
+appli_light.c:775:14:Appli_Light_GetLightnessDefaultStatus	1
+appli_light.c:791:14:Appli_Light_GetLightnessLastStatus	1
+appli_light.c:810:14:Appli_Light_GetLightnessRangeStatus	1
+appli_light.c:1114:6:Appli_Light_PwmInit	1
+appli_light.c:1229:6:Rgb_LedOffState	1
+appli_light.c:1243:6:Ctl_LedOffState	1
+appli_light.c:1255:6:Light_UpdateLedValue	1
