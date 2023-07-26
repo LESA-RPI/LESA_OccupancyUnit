@@ -282,23 +282,6 @@ For more details refer to the Application Note:
  
  reference:
 https://wiki.st.com/stm32mcu/wiki/Connectivity:STM32WB_BLE_MESH_Sensor_Model#/media/File:Connectivity_sensor-demo12.png
-
-
-
-The modified example software provided by ST uses a sequencer library for scheduling tasks. 
-
-Before using the sequencer it must be initialized by a call to the function :
-
-UTIL_SEQ_Init( void ).
-
-A function is registered as a task in the sequencer by
-
-UTIL_SEQ_RegTask( UTIL_SEQ_bm_t TaskId_bm, uint32_t Flags, void (*Task)( void ) );
-
-The first parameter is the task ID and is a 32-bit value where only one bit should be set, i.e. 
-the maximum number of tasks is 32. The second parameter is not used for anything by the library, and the third parameter is a pointer to the function which should be called when it is time for the task to run.
-
-To request a task to be runned, 
  
  
 - BLE_MeshLightingPRFNode/STM32_WPAN/app/mesh_cfg_usr.h         User configurable settings 
@@ -330,7 +313,7 @@ To request a task to be runned,
 - BLE_MeshLightingPRFNode/STM32CubeIDE/Drivers/BSP/vl53l8cx      Essential drivers stuff
 
 
-
+Hi - Sean
  
  
  
