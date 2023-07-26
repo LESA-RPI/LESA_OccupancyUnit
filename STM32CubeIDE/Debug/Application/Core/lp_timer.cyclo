@@ -1,0 +1,4 @@
+lp_timer.c:50:6:LpTimerInit	1
+lp_timer.c:63:6:LpTimerStart	2
+lp_timer.c:96:10:LpGetElapsedTime	1
+lp_timer.c:126:13:LpTimerCb	1
