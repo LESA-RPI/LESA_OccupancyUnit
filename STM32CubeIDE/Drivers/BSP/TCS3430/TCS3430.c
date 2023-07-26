@@ -21,16 +21,10 @@ int32_t get_data(uint8_t *reginfo)
     /*
      * FUNCTION: Read from each register once and stored the values in array
      * ---------
-     * INPUT: reginfo[35] - the array used to store all the values from registers, it should have size of 35
+     * INPUT: reginfo[24] - the array used to store all the values from registers, it should have size of 35
      * RETURN: 0 - success
      *         -1 - error
      */
-
-    // /*Check if the size of registers info array */
-    // if (((sizeof(reginfo))/(sizeof(int))) != 35) {
-    //     printf("Register info array has the wrong size.");
-    //     return -1;
-    // }
 	int addr[] = {0x80, 0x81, 0x83, 0x84, 0x85, 0x86, 0x87, 0x8C,
 				0x8D, 0x90, 0x91, 0x92, 0x94, 0x95, 0x96, 0x97,
 				0x98, 0x99, 0x9A, 0x9B, 0x9F, 0xAB, 0xD6, 0xDD};
@@ -51,8 +45,7 @@ int32_t set_atime(uint8_t *reginfo, int cycle_No)
 	/*
 	 * FUNCTION: Change the integration time
 	 * ---------
-	 * INPUT: fd - the file descriptor of the i2c device
-	 *        reginfo[35] - current values of all registers
+	 * INPUT: reginfo[24] - current values of all registers
 	 *        cycle_No - integration cycle numbers, must be between 1-256
 	 * RETURN: 0 - success
 	 *         -1 - error
@@ -72,6 +65,14 @@ int32_t set_atime(uint8_t *reginfo, int cycle_No)
 
 int32_t set_cfg0(uint8_t *reginfo, uint8_t mode)
 {
+	/*
+	 * FUNCTION: Change the wait time
+	 * ---------
+	 * INPUT: reginfo[24] - current values of all registers
+	 *        cycle_No - integration cycle numbers, must be between 1-256
+	 * RETURN: 0 - success
+	 *         -1 - error
+	 */
 	if(mode)
 	{
 		reginfo[8] |= 0x04;
@@ -86,10 +87,9 @@ int32_t set_cfg0(uint8_t *reginfo, uint8_t mode)
 int32_t set_cfg1(uint8_t *reginfo, uint8_t ALS_Mul, uint8_t again_flag)
 {
 	/*
-	 * FUNCTION: Change the gain and ir to green setting
+	 * FUNCTION: Change the gain and IR2 setting
 	 * ---------
-	 * INPUT: fd - the file descriptor of the i2c device
-	 *        reginfo[24] - current values of all registers
+	 * INPUT: reginfo[24] - current values of all registers
 	 *        ALS_Mul - Sets the CH3 input. Default = 0 (X Channel). Set to 1 to read IR2.
 	 *        again_flag - [x1 - gain of 1, x4 - gain of 4, x16 - gain of 16, x64 - gain of 64]
 	 * RETURN: 0 - success
@@ -128,6 +128,14 @@ int32_t set_cfg1(uint8_t *reginfo, uint8_t ALS_Mul, uint8_t again_flag)
 
 int32_t set_cfg2(uint8_t *reginfo, uint8_t mode)
 {
+	/*
+	 * FUNCTION: Change the gain to max
+	 * ---------
+	 * INPUT: reginfo[24] - current values of all registers
+	 *        mode - If this bit is set to 1 and AGAIN in the CFG1 register is set to 11, then the 128x gain mode will be enabled.
+	 * RETURN: 0 - success
+	 *         -1 - error
+	 */
 	if(mode)
 	{
 		reginfo[19] |= 0x10;
@@ -141,6 +149,15 @@ int32_t set_cfg2(uint8_t *reginfo, uint8_t mode)
 
 int32_t set_cfg3(uint8_t *reginfo, uint8_t mode, uint8_t sai)
 {
+	/*
+	 * FUNCTION:
+	 * ---------
+	 * INPUT: reginfo[24] - current values of all registers
+	 *        mode - If this bit is set, all flag bits in the STATUS register will be reset whenever the STATUS register is read over I2C.
+	 *        sai - Sleep After Interrupt. Power down the device at the end of the ALS cycle if an interrupt has been generated
+	 * RETURN: 0 - success
+	 *         -1 - error
+	 */
 	if(mode)
 	{
 		reginfo[20] |= 0x80;
@@ -166,6 +183,16 @@ int32_t set_cfg3(uint8_t *reginfo, uint8_t mode, uint8_t sai)
 
 int32_t set_AutoZeroMode(uint8_t *reginfo, uint8_t mode, uint8_t AZ_ITERATION)
 {
+    /*
+     * FUNCTION:
+     * ---------
+     * INPUT: reginfo[24] - current values of all registers, mode
+     *        mode - 0: Always start at zero when searching the best offset value
+		     1: Always start at the previous (offset_c) with the auto-zero mechanism
+     *        AZ_ITERATION - Run autozero automatically every nth ALS iteration (0=never, 7Fh=only at first ALS cycle, n=every nth time)
+     * RETURN: 0 - success
+     *         -1 - error
+     */
     if (mode)
     {
         reginfo[22] |= 0x80;
@@ -191,6 +218,16 @@ int32_t set_AutoZeroMode(uint8_t *reginfo, uint8_t mode, uint8_t AZ_ITERATION)
 
 int32_t set_ALSInterrupt(uint8_t *reginfo, uint8_t AIEN, uint8_t ASIEN)
 {
+	/*
+	 * FUNCTION:
+	 * ---------
+	 * INPUT: reginfo[24] - current values of all registers, mode
+	 *        AIEN - 0: Writing '1' to this bit enables ALS interrupt.
+						 1: Always start at the previous (offset_c) with the auto-zero mechanism
+	 *        ASIEN - Writing '1' to this bit enables ASAT interrupt.
+	 * RETURN: 0 - success
+	 *         -1 - error
+	 */
 	if(AIEN)
 	{
 		reginfo[23] |= 0x08;
@@ -217,12 +254,11 @@ int32_t set_ALSInterrupt(uint8_t *reginfo, uint8_t AIEN, uint8_t ASIEN)
 int32_t enable_sensor(uint8_t *reginfo, uint8_t wait_flag, uint8_t als_flag)
 {
 	/*
-	 * FUNCTION: Change the enable register settings
+	 * FUNCTION: Enable the wait or als and sensor
 	 * ---------
 	 * INPUT: fd - the file descriptor of the i2c device
-	 *        reginfo[35] - current values of all registers
+	 *        reginfo[24] - current values of all registers
 	 *        wait_flag - 1 to enable wait feature, 0 to disable wait feature
-	 *        prox_flag - 1 to enable proximity feature, 0 to disable wait feature
 	 *        als_flag - 1 to enable als feature, 0 to disable wait feature
 	 * RETURN: 0 - success
 	 *         -1 - error
@@ -247,6 +283,12 @@ int32_t enable_sensor(uint8_t *reginfo, uint8_t wait_flag, uint8_t als_flag)
 
 int32_t disable_sensor(uint8_t *reginfo)
 {
+	/*
+	 * FUNCTION: Disable the sesor
+	 * ---------
+	 * INPUT: fd - the file descriptor of the i2c device
+	 * RETURN: 0 - success
+	 */
 	reginfo[0] = reginfo[0] & 0x00;
 	ret = BSP_I2C1_WriteReg(TCS3430_ADDR, ENABLE_ADDR, reginfo, 1);
 	return ret;
@@ -254,6 +296,12 @@ int32_t disable_sensor(uint8_t *reginfo)
 
 void softReset(uint8_t *reginfo)
 {
+ /*
+  * FUNCTION: Change the enable register settings
+  * ---------
+  * INPUT: fd - the file descriptor of the i2c device
+  * RETURN: 0 - success
+  */
   disable_sensor(reginfo);
   set_atime(reginfo, 36);
 
