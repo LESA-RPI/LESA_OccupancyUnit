@@ -55,12 +55,12 @@ Application/Core/custom_ranging_sensor.o: \
  ../../Core/Inc/stm32wbxx_nucleo_bus.h \
  ../../Core/Inc/stm32wbxx_nucleo_conf.h \
  ../../Core/Inc/stm32wbxx_nucleo_errno.h ../../Core/Inc/ranging_sensor.h \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/BSP/Components/vl53l8cx/vl53l8cx.h \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/BSP/Components/vl53l8cx/porting/platform.h \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h
+ ../../Drivers/BSP/Components/vl53l8cx/vl53l8cx.h \
+ ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h \
+ ../../Drivers/BSP/Components/vl53l8cx/porting/platform.h \
+ ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h \
+ ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h \
+ ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h
 ../../Core/Inc/custom_ranging_sensor.h:
 ../../Core/Inc/custom_tof_conf.h:
 ../../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h:
@@ -118,9 +118,9 @@ Application/Core/custom_ranging_sensor.o: \
 ../../Core/Inc/stm32wbxx_nucleo_conf.h:
 ../../Core/Inc/stm32wbxx_nucleo_errno.h:
 ../../Core/Inc/ranging_sensor.h:
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/BSP/Components/vl53l8cx/vl53l8cx.h:
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h:
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/BSP/Components/vl53l8cx/porting/platform.h:
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h:
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h:
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h:
+../../Drivers/BSP/Components/vl53l8cx/vl53l8cx.h:
+../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h:
+../../Drivers/BSP/Components/vl53l8cx/porting/platform.h:
+../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h:
+../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h:
+../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h:
