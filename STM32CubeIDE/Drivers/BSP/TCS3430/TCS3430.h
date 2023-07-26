@@ -44,9 +44,9 @@ typedef struct tcs3430_optics_val
 	 uint16_t Y;
 	 uint16_t Z;
 	 uint16_t IR;
-	 uint16_t CPL;
-	 uint16_t Lux;
-	 uint16_t CCT;
+	 uint16_t CPL; // Not necessary
+	 uint16_t Lux; // Not necessary
+	 uint16_t CCT; // Not necessary
 } tcs3430_optics_val;
 
 typedef struct TCS3430
