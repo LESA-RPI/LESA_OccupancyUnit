@@ -1,0 +1,10 @@
+stm32wbxx_ll_system.h:2162:26:LL_FLASH_IsActiveFlag_OperationSuspended	2
+stm32wbxx_ll_hsem.h:233:26:LL_HSEM_1StepLock	2
+stm32wbxx_ll_hsem.h:247:22:LL_HSEM_ReleaseLock	1
+stm32wbxx_ll_hsem.h:258:26:LL_HSEM_GetStatus	2
+flash_driver.c:49:10:FD_EraseSectors	5
+flash_driver.c:103:10:FD_WriteData	5
+flash_driver.c:142:30:FD_EraseSingleSector	1
+flash_driver.c:152:30:FD_WriteSingleData	1
+flash_driver.c:166:37:ProcessSingleFlashOperation	12
+flash_driver.c:308:26:FD_WaitForSemAvailable	1

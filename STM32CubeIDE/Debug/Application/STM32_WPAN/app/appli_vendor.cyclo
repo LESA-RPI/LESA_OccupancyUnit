@@ -1,0 +1,8 @@
+appli_vendor.c:77:14:Appli_Vendor_DeviceInfo	10
+appli_vendor.c:195:14:Appli_Vendor_Test	6
+appli_vendor.c:292:14:Appli_Vendor_LEDControl	10
+appli_vendor.c:438:14:Appli_Vendor_Data_write	3
+appli_vendor.c:474:6:Appli_GetTestValue	1
+appli_vendor.c:490:14:Appli_Vendor_SetBigDataPacket	2
+appli_vendor.c:510:14:Appli_Vendor_SendBigDataPacket	2
+appli_vendor.c:539:6:Appli_Vendor_Publish	2

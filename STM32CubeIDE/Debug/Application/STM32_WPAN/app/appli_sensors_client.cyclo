@@ -1,0 +1,8 @@
+appli_sensors_client.c:57:14:Appli_SensorsClient_API	16
+appli_sensors_client.c:152:6:Appli_Sensor_Cadence_Status	2
+appli_sensors_client.c:177:6:Appli_Sensor_Settings_Status	2
+appli_sensors_client.c:203:6:Appli_Sensor_Setting_Status	2
+appli_sensors_client.c:228:6:Appli_Sensor_Descriptor_Status	2
+appli_sensors_client.c:253:6:Appli_Sensor_Status	2
+appli_sensors_client.c:284:6:Appli_Sensor_Column_Status	2
+appli_sensors_client.c:309:6:Appli_Sensor_Series_Status	2

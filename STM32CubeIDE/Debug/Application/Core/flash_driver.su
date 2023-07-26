@@ -1,0 +1,10 @@
+../../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_system.h:2162:26:LL_FLASH_IsActiveFlag_OperationSuspended	4	static
+../../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_hsem.h:233:26:LL_HSEM_1StepLock	16	static
+../../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_hsem.h:247:22:LL_HSEM_ReleaseLock	24	static
+../../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_hsem.h:258:26:LL_HSEM_GetStatus	16	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/Core/Src/flash_driver.c:49:10:FD_EraseSectors	32	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/Core/Src/flash_driver.c:103:10:FD_WriteData	40	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/Core/Src/flash_driver.c:142:30:FD_EraseSingleSector	24	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/Core/Src/flash_driver.c:152:30:FD_WriteSingleData	32	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/Core/Src/flash_driver.c:166:37:ProcessSingleFlashOperation	64	static,ignoring_inline_asm
+C:/STM/workspace/BLE_MeshLightingPRFNode/Core/Src/flash_driver.c:308:26:FD_WaitForSemAvailable	16	static

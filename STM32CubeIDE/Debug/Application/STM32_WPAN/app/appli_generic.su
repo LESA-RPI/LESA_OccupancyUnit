@@ -1,0 +1,5 @@
+C:/STM/workspace/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_generic.c:388:14:Appli_Generic_GetOnOffStatus	16	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_generic.c:406:14:Appli_Generic_GetOnOffValue	16	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_generic.c:427:14:Appli_Generic_GetLevelStatus	16	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_generic.c:448:14:Appli_Generic_GetPowerOnOffStatus	16	static
+C:/STM/workspace/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_generic.c:467:14:Appli_Generic_GetDefaultTransitionStatus	16	static

@@ -1,0 +1,10 @@
+hci_tl.c:68:6:hci_init	1
+hci_tl.c:80:6:hci_user_evt_proc	7
+hci_tl.c:138:6:hci_resume_flow	1
+hci_tl.c:151:5:hci_send_req	8
+hci_tl.c:215:13:TlInit	2
+hci_tl.c:242:13:SendCmd	1
+hci_tl.c:253:13:NotifyCmdStatus	4
+hci_tl.c:273:13:TlEvtReceived	3
+hci_tl.c:290:13:hci_cmd_resp_wait	2
+hci_tl.c:300:13:hci_cmd_resp_release	1

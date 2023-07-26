@@ -1,0 +1,15 @@
+appli_light_client.c:61:14:Appli_LightClient_API	1
+appli_light_client.c:447:14:Appli_Light_Lightness_Status	7
+appli_light_client.c:500:14:Appli_Light_Lightness_Linear_Status	7
+appli_light_client.c:553:14:Appli_Light_Lightness_Last_Status	4
+appli_light_client.c:596:14:Appli_Light_Lightness_Default_Status	4
+appli_light_client.c:638:14:Appli_Light_Lightness_Range_Status	7
+appli_light_client.c:688:14:Appli_Light_Ctl_Status	11
+appli_light_client.c:753:14:Appli_Light_CtlTemperature_Status	11
+appli_light_client.c:820:14:Appli_Light_CtlTemperature_Range_Status	7
+appli_light_client.c:875:14:Appli_Light_CtlDefault_Status	8
+appli_light_client.c:928:14:Appli_Light_Hsl_Status	9
+appli_light_client.c:987:14:Appli_Light_HslHue_Status	7
+appli_light_client.c:1040:14:Appli_Light_HslSaturation_Status	7
+appli_light_client.c:1089:14:Appli_Light_HslDefault_Status	8
+appli_light_client.c:1142:14:Appli_Light_HslRange_Status	11
