@@ -1,5 +1,0 @@
-appli_generic.c:388:14:Appli_Generic_GetOnOffStatus	1
-appli_generic.c:406:14:Appli_Generic_GetOnOffValue	1
-appli_generic.c:427:14:Appli_Generic_GetLevelStatus	1
-appli_generic.c:448:14:Appli_Generic_GetPowerOnOffStatus	1
-appli_generic.c:467:14:Appli_Generic_GetDefaultTransitionStatus	1

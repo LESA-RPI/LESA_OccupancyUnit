@@ -1,4 +1,0 @@
-C:/STM/workspace/BLE_MeshLightingPRFNode/Core/Src/lp_timer.c:50:6:LpTimerInit	8	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Core/Src/lp_timer.c:63:6:LpTimerStart	16	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Core/Src/lp_timer.c:96:10:LpGetElapsedTime	24	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Core/Src/lp_timer.c:126:13:LpTimerCb	4	static
