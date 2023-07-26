@@ -49,7 +49,6 @@
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.includepaths.340497097" name="Include paths (-I)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.includepaths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Device/ST/STM32WBxx/Include"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}&quot;"/>
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../Drivers/STM32WBxx_HAL_Driver/Inc"/>
 									<listOptionValue builtIn="false" value="../../Drivers/BSP/P-NUCLEO-WB55.Nucleo"/>
@@ -69,11 +68,12 @@
 									<listOptionValue builtIn="false" value="../../STM32_WPAN/app"/>
 									<listOptionValue builtIn="false" value="../../Middlewares/ST/STM32_WPAN/ble"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Application/Core}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLE_MeshLightingPRFNode/Drivers/BSP/TCS3430}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../..\Drivers\BSP\Components\vl53l8cx\modules&quot;"/>
-									<listOptionValue builtIn="false" value="../../Drivers/BSP/Components/vl53l8cx"/>
 									<listOptionValue builtIn="false" value="&quot;../..\STM32CubeIDE\Drivers\BSP\tmd3725&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../..\Drivers\BSP\Components\vl53l8cx\porting&quot;"/>
+									<listOptionValue builtIn="false" value="../../"/>
+									<listOptionValue builtIn="false" value="&quot;../..\STM32CubeIDE\Drivers\BSP\TCS3430&quot;"/>
+									<listOptionValue builtIn="false" value="../../STM32CubeIDE/Drivers/BSP/vl53l8cx"/>
+									<listOptionValue builtIn="false" value="../../STM32CubeIDE/Drivers/BSP/vl53l8cx/porting"/>
+									<listOptionValue builtIn="false" value="../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.721699402" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>

@@ -56,12 +56,12 @@ Application/Core/app_tof.o: \
  ../../Core/Inc/stm32wbxx_nucleo_bus.h \
  ../../Core/Inc/stm32wbxx_nucleo_conf.h \
  ../../Core/Inc/stm32wbxx_nucleo_errno.h ../../Core/Inc/ranging_sensor.h \
- ../../Drivers/BSP/Components/vl53l8cx/vl53l8cx.h \
- ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h \
- ../../Drivers/BSP/Components/vl53l8cx/porting/platform.h \
- ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h \
- ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h \
- ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/vl53l8cx.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/porting/platform.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h \
  ../../Core/Inc/main.h ../../Core/Inc/app_conf.h \
  ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/hw.h \
  ../../Core/Inc/hw_conf.h ../../Core/Inc/hw_if.h \
@@ -145,12 +145,12 @@ Application/Core/app_tof.o: \
 ../../Core/Inc/stm32wbxx_nucleo_conf.h:
 ../../Core/Inc/stm32wbxx_nucleo_errno.h:
 ../../Core/Inc/ranging_sensor.h:
-../../Drivers/BSP/Components/vl53l8cx/vl53l8cx.h:
-../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h:
-../../Drivers/BSP/Components/vl53l8cx/porting/platform.h:
-../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h:
-../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h:
-../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/vl53l8cx.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/porting/platform.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h:
 ../../Core/Inc/main.h:
 ../../Core/Inc/app_conf.h:
 ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/hw.h:

@@ -55,12 +55,12 @@ Drivers/BSP/TCS3430/TCS3430.o: ../Drivers/BSP/TCS3430/TCS3430.c \
  ../../Core/Inc/stm32wbxx_nucleo_errno.h ../../Core/Inc/app_tof.h \
  ../../Core/Inc/custom_ranging_sensor.h ../../Core/Inc/custom_tof_conf.h \
  ../../Core/Inc/stm32wbxx_nucleo_bus.h ../../Core/Inc/ranging_sensor.h \
- ../../Drivers/BSP/Components/vl53l8cx/vl53l8cx.h \
- ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h \
- ../../Drivers/BSP/Components/vl53l8cx/porting/platform.h \
- ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h \
- ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h \
- ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/vl53l8cx.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/porting/platform.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h \
  ../../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.h \
  ../../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo_errno.h \
  ../../Core/Inc/stm32wbxx_nucleo_conf.h
@@ -124,12 +124,12 @@ Drivers/BSP/TCS3430/TCS3430.o: ../Drivers/BSP/TCS3430/TCS3430.c \
 ../../Core/Inc/custom_tof_conf.h:
 ../../Core/Inc/stm32wbxx_nucleo_bus.h:
 ../../Core/Inc/ranging_sensor.h:
-../../Drivers/BSP/Components/vl53l8cx/vl53l8cx.h:
-../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h:
-../../Drivers/BSP/Components/vl53l8cx/porting/platform.h:
-../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h:
-../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h:
-../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/vl53l8cx.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/porting/platform.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h:
 ../../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.h:
 ../../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo_errno.h:
 ../../Core/Inc/stm32wbxx_nucleo_conf.h:

@@ -88,14 +88,14 @@ Application/STM32_WPAN/app/appli_sensor.o: \
  ../../Core/Inc/custom_tof_conf.h ../../Core/Inc/stm32wbxx_nucleo_bus.h \
  ../../Core/Inc/stm32wbxx_nucleo_conf.h \
  ../../Core/Inc/stm32wbxx_nucleo_errno.h ../../Core/Inc/ranging_sensor.h \
- ../../Drivers/BSP/Components/vl53l8cx/vl53l8cx.h \
- ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h \
- ../../Drivers/BSP/Components/vl53l8cx/porting/platform.h \
- ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h \
- ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h \
- ../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/vl53l8cx.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/porting/platform.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h \
+ ../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h \
  ../../Core/Inc/custom_ranging_sensor.h ../../Core/Inc/TMD3725.h \
- C:/STM/workspace/BLE_MeshLightingPRFNode/STM32CubeIDE/Drivers/BSP/TCS3430/TCS3430.h \
+ ../../STM32CubeIDE/Drivers/BSP/TCS3430/TCS3430.h \
  ../../Core/Inc/stm32wbxx_nucleo_bus.h
 C:/STM/workspace/BLE_MeshLightingPRFNode/STM32_WPAN/app/hal_common.h:
 C:/STM/workspace/BLE_MeshLightingPRFNode/STM32_WPAN/app/user_if.h:
@@ -192,13 +192,13 @@ C:/STM/workspace/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_light_lc.h:
 ../../Core/Inc/stm32wbxx_nucleo_conf.h:
 ../../Core/Inc/stm32wbxx_nucleo_errno.h:
 ../../Core/Inc/ranging_sensor.h:
-../../Drivers/BSP/Components/vl53l8cx/vl53l8cx.h:
-../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h:
-../../Drivers/BSP/Components/vl53l8cx/porting/platform.h:
-../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h:
-../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_api.h:
-../../Drivers/BSP/Components/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/vl53l8cx.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/porting/platform.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h:
+../../STM32CubeIDE/Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h:
 ../../Core/Inc/custom_ranging_sensor.h:
 ../../Core/Inc/TMD3725.h:
-C:/STM/workspace/BLE_MeshLightingPRFNode/STM32CubeIDE/Drivers/BSP/TCS3430/TCS3430.h:
+../../STM32CubeIDE/Drivers/BSP/TCS3430/TCS3430.h:
 ../../Core/Inc/stm32wbxx_nucleo_bus.h:
