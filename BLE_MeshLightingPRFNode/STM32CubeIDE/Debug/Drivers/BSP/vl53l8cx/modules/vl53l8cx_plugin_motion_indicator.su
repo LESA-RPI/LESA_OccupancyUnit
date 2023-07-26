@@ -1,3 +1,0 @@
-../Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_motion_indicator.c:16:9:vl53l8cx_motion_indicator_init	32	static
-../Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_motion_indicator.c:48:9:vl53l8cx_motion_indicator_set_distance_motion	32	static
-../Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_motion_indicator.c:83:9:vl53l8cx_motion_indicator_set_resolution	32	static
