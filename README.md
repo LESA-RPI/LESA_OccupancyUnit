@@ -200,7 +200,6 @@ Above two functions are necessary whenever you change the setting of the TOF(suc
 
 
 
-
 Reference:
 
 https://wiki.st.com/stm32mcu/wiki/Connectivity:STM32WB_BLE_MESH_Sensor_Model#/media/File:Connectivity_sensor-demo12.png
