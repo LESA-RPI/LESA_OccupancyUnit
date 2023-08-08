@@ -1,7 +1,7 @@
 # LESA_OccupancyUnit (BLE_MeshLightingPRFNode)
 ## Table of Contents
-- [Folder Navigation](##Folder-Navigation)
-- [Flow charts](Flow-charts)
+- [Folder Navigation](#Folder-Navigation)
+- [Flow charts](#Flow-charts)
 - [How to use](#How-to-use)
 - [How it works](#How-it-works)
 - [How it runs](#How-it-runs)
