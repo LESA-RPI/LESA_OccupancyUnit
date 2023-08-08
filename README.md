@@ -90,3 +90,11 @@ Above two functions are necessary whenever you change the setting of the TOF(suc
 Reference:
 
 https://wiki.st.com/stm32mcu/wiki/Connectivity:STM32WB_BLE_MESH_Sensor_Model#/media/File:Connectivity_sensor-demo12.png
+
+Summer Team Contact Information:
+•	Kaihong (Kai) Lin - link10@rpi.edu 
+•	Sanghyun (Sean) Kim- kims29@rpi.edu 
+•	Jason Zheng- zhengj8@rpi.edu
+
+
+
