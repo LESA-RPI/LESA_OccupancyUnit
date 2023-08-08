@@ -1,4 +1,4 @@
-This program is not important.
+This program is not important to the final project. This produces a spectrometer that lights up an led with a sensed color.
 
 It uses two ESP32, one with color sensor attached and the other with neopixel (rgb LED). 
 
