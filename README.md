@@ -1,7 +1,9 @@
-# BLE_MeshLightingPRFNode
+# LESA_OccupancyUnit (BLE_MeshLightingPRFNode)
 
 
 Based on STM's *BLE_MeshLightingPRFNode* example, this project gets data from the ToF and color sensor. Bluetooth functionality has not been fully developed
+
+### Overview
 ```mermaid
 graph LR
 A[Square Rect] -- Link text --> B((Circle))
@@ -11,14 +13,17 @@ C --> a
 ```
 
 ## How to use
-Due to the incompetence of our ability, to use our project, you must create the following workspace `C:\STM\workspace\BLE_MeshLightingPRFNode\...`, and move all the STM32 library files into the directory
+Due to the incompetence of our ability, in order to use our project, you must create the following workspace `C:\STM\workspace\BLE_MeshLightingPRFNode\...`, and copy the entire repo into the above folder
+
+![image](https://github.com/IAmiku/LESA_OccupancyUnit/assets/28797384/7b4293d4-111c-4e78-a1c0-8d8e865e68df)
+
 
 
 ## Sensor related files
 
 ##### VL53L8CX (TOF Sensor)
 
-    *app_tof.c  ->  /BLE_MeshLightingPRFNode/Application/Core/app_tof.c
+    app_tof.c  ->  /BLE_MeshLightingPRFNode/Application/Core/app_tof.c
 
     - void MX_TOF_Init(void)
   
@@ -46,7 +51,7 @@ Due to the incompetence of our ability, to use our project, you must create the 
 
 ##### TCS3430 (Tristimulus Sensor)
 
-    *TCS3430.h  ->  /BLE_MeshLightingPRFNode/Drivers/BSP/TCS3430/TCS3430.h
+    TCS3430.h  ->  /BLE_MeshLightingPRFNode/Drivers/BSP/TCS3430/TCS3430.h
  
     - Includes all the address of the registers of TCS3430
     
@@ -62,7 +67,7 @@ Due to the incompetence of our ability, to use our project, you must create the 
 
         XYZinfo -> Low & High byte of X, Y, Z, and IR1
 
-    *TCS3430.c  ->  /BLE_MeshLightingPRFNode/Drivers/BSP/TCS3430/TCS3430.c
+    TCS3430.c  ->  /BLE_MeshLightingPRFNode/Drivers/BSP/TCS3430/TCS3430.c
 
     ............
 
