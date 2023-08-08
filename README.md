@@ -20,9 +20,6 @@ end
 ```
 
 ### Conituous ToF matrix pulling configeration
-Core/Inc/TMD3725.h
-
-https://github.com/IAmiku/LESA_OccupancyUnit/blob/c6929a787fb46911707d2c5e188f4d21034e0b88/Core/Inc/TMD3725.h
 ```mermaid
 graph TD
 
@@ -37,6 +34,7 @@ end
 ```
 
 
+
 ## How to use
 In order to use this project you must download this entire repository and open the `.project` file in the STM32CubeIDE folder:
 
@@ -46,9 +44,11 @@ In order to use this project you must download this entire repository and open t
 | This is how the files should be placed in the workspace folder | Open the project by clicking the .project file |
 
 
-
-
 ## Tracking Algorithm
+
+[`Tracking_Algo.h`](Core/Inc/Tracking_Algo.h) Function declerations and Macro settings for STM32
+
+[`Tracking_Algo.c`](Core/Src/Tracking_Algo.c) Algorithm itself, can be copied into an online C compiler to run and test
 
 
 
