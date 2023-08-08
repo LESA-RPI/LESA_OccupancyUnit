@@ -115,7 +115,7 @@ UTIL_SEQ_SetTask((1 << 4), CFG_SEQ_Prio_0);
 
 ### Bluetooth setting
 
-This project envisioned using BLE mesh to communicate between units
+This project envisioned using BLE mesh to communicate between units. Click [here](Doc/readme.txt) to learn more.
 
 ## Tracking Algorithm
 
