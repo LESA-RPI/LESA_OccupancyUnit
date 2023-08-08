@@ -1,16 +1,22 @@
 # BLE_MeshLightingPRFNode
 
 
-Based on STM's BLE_MeshLightingPRFNode example, this project gets data from the ToF and color sensor. Due to the incompetance of our ability, in order to use our project, you have to do the following: 
+Based on STM's *BLE_MeshLightingPRFNode* example, this project gets data from the ToF and color sensor. Bluetooth functionality has not been fully developed
+```mermaid
+graph LR
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{HELLO}
+C --> a
+```
+
+## How to use
+Due to the incompetence of our ability, to use our project, you must create the following workspace `C:\STM\workspace\BLE_MeshLightingPRFNode\...`, and move all the STM32 library files into the directory
 
 
+## Sensor related files
 
-// TODO: Add file structure
-
-Make sure to create the following workspace for STM32cubeIDE:
-C:\STM\workspace\BLE_MeshLightingPRFNode
-
-VL53L8CX(TOF Sensor)
+##### VL53L8CX (TOF Sensor)
 
     *app_tof.c  ->  /BLE_MeshLightingPRFNode/Application/Core/app_tof.c
 
@@ -38,7 +44,7 @@ VL53L8CX(TOF Sensor)
   
       : Stop the TOF sensor
 
-TCS3430(Tristimulus Sensor)
+##### TCS3430 (Tristimulus Sensor)
 
     *TCS3430.h  ->  /BLE_MeshLightingPRFNode/Drivers/BSP/TCS3430/TCS3430.h
  
