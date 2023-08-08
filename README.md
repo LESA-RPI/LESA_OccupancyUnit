@@ -1,5 +1,19 @@
 # LESA_OccupancyUnit (BLE_MeshLightingPRFNode)
 ## Table of Contents
+[Folder Navigation](#Folder-Navigation)
+[Current Program Overview (STM32 occupancy detection)](#Current%20Program%20Overview%20(STM32%20occupancy%20detection))
+[### Project Overview ](### Project Overview )
+[### Conituous ToF matrix pulling configeration](### Conituous ToF matrix pulling configeration)
+[## Sensor related files](## Sensor related files)
+[VL53L8CX (TOF Sensor)](##### VL53L8CX (TOF Sensor))
+[##### TCS3430 (Tristimulus Sensor)](##### TCS3430 (Tristimulus Sensor))
+[### Summer Team Contact Information:](### Summer Team Contact Information:)
+
+[Emphasis](#emphasis)  
+...snip...    
+<a name="headers"/>
+
+## Folder Navigation
 1. [NON-STM32 Project Folder](https://github.com/IAmiku/LESA_OccupancyUnit/tree/main/NON-STM32%20Project%20Folder)
     - [App](https://github.com/IAmiku/LESA_OccupancyUnit/tree/main/NON-STM32%20Project%20Folder/App)
     - [DataBase](https://github.com/IAmiku/LESA_OccupancyUnit/tree/main/NON-STM32%20Project%20Folder/DataBase)
@@ -189,7 +203,7 @@ Reference:
 
 https://wiki.st.com/stm32mcu/wiki/Connectivity:STM32WB_BLE_MESH_Sensor_Model#/media/File:Connectivity_sensor-demo12.png
 
-Summer Team Contact Information:
+### Summer Team Contact Information:
 
 •	link10@rpi.edu 
 
