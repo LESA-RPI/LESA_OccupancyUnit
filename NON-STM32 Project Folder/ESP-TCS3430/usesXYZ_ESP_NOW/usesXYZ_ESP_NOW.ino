@@ -12,6 +12,7 @@ struct_message myData;
 
 
 void setup(){
+  //Setup serial, wifi connection, and sensor connection
   Serial.begin(115200);
   Serial.println();
   Serial.print("ESP Board MAC Address:  ");
@@ -34,7 +35,8 @@ void loop(){
 void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
   memcpy(&myData, incomingData, sizeof(myData));
   //Serial.print(len);
-  
+
+  //Format data
   //Serial.print(" Bytes");
   uint16_t X = (myData.XYZ[1])<<8|myData.XYZ[0];
   uint16_t Y = (myData.XYZ[3])<<8|myData.XYZ[2];
@@ -50,11 +52,13 @@ void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
   */
   X=0.8*X;
   Z=3*Z;
-  
+
+  //Calculate color values
   double R =  3.2404542*X - 1.5371385*Y - 0.4985314*Z;
   double G = -0.9692660*X + 1.8760108*Y + 0.0415560*Z;
   double B =  0.0556434*X - 0.2040259*Y + 1.0572252*Z;
 
+  //Parse serial string
   String str = "X : " + String(X) + "    Y : " + String(Y) + "    Z : " +  String(Z) + "    IR1 : "+String(IR1Data)
   + "    R : " +  String(int(R)) + "    G : " +  String(int(G)) + "    B : " +  String(int(B)) ;
   double big = max(R,G);
