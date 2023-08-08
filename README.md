@@ -49,9 +49,10 @@ In order to use this project you must download this entire repository and open t
 [`Tracking_Algo.h`](Core/Inc/Tracking_Algo.h) Function declerations and Macro settings for STM32
 
 [`Tracking_Algo.c`](Core/Src/Tracking_Algo.c) Algorithm itself, can be copied into an online C compiler to run and test
-#####TODO: 
-update void `link_latest_frame_to_previous(FIFObuffer *fifobuffer)` to allow multi-frame traceback 
-update void `int find_centers_of_mass(int matrix[N][N], Point *center_of_mass)` in `FrameInfo parse_frame(int matrix[N][N], float deltaX, float deltaY)` to allow track person better
+
+##### TODO: 
+- update void `link_latest_frame_to_previous(FIFObuffer *fifobuffer)` to allow multi-frame traceback 
+- update void `int find_centers_of_mass(int matrix[N][N], Point *center_of_mass)` in `FrameInfo parse_frame(int matrix[N][N], float deltaX, float deltaY)` to allow track person better
 
        
 
