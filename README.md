@@ -20,7 +20,9 @@ end
 ```
 
 ### Conituous ToF matrix pulling configeration
+Core/Inc/TMD3725.h
 
+https://github.com/IAmiku/LESA_OccupancyUnit/blob/c6929a787fb46911707d2c5e188f4d21034e0b88/Core/Inc/TMD3725.h
 ```mermaid
 graph TD
 
@@ -42,6 +44,12 @@ In order to use this project you must download this entire repository and open t
 | <img src="https://github.com/IAmiku/LESA_OccupancyUnit/assets/28797384/7b4293d4-111c-4e78-a1c0-8d8e865e68df" width="450" /> | <img src="https://github.com/IAmiku/LESA_OccupancyUnit/assets/28797384/2f35a595-6f8a-4ca5-84a6-371e19c2acde" width="450" /> |
 |--|--|
 | This is how the files should be placed in the workspace folder | Open the project by clicking the .project file |
+
+
+
+
+## Tracking Algorithm
+
 
 
 ## Sensor related files
@@ -98,7 +106,7 @@ https://github.com/IAmiku/LESA_OccupancyUnit/tree/main/NON-STM32%20Project%20Fol
     ............
 
 Above two functions are necessary whenever you change the setting of the TOF(such as frequency of configure mode)
-// TODO: Add set up tutoriald
+
 
 
 
