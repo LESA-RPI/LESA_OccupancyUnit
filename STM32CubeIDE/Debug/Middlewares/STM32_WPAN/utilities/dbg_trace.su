@@ -1,6 +1,0 @@
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c:120:13:DbgTraceGetFileName	24	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c:145:6:DbgTraceBuffer	24	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c:166:13:DbgTrace_TxCpltCallback	32	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c:205:6:DbgTraceInit	16	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c:227:8:_write	24	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c:254:8:DbgTraceWrite	48	static,ignoring_inline_asm
