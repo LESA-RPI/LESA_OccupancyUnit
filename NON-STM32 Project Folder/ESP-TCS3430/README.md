@@ -12,7 +12,7 @@ esp1[ESP32]
 esp2[ESP32 with neopixel]
 cols[ColorSensor]
 computer[PC with python running]
-computer --either one--> esp1 & esp2
+computer --flash--> esp1 & esp2
 esp1<--ESP NOW-->esp2
 esp1<--I2C-->cols
 ```
