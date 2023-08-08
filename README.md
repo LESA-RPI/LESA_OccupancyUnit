@@ -20,10 +20,6 @@
 
 [Sensor related files](#Sensor-related-files)
 
-[VL53L8CX (TOF Sensor)](#VL53L8CX-(TOF-Sensor))
-
-[TCS3430 (Tristimulus Sensor)](#TCS3430-(Tristimulus-Sensor))
-
 [Summer Team Contact Information](#Summer-Team-Contact-Information)
 
 
