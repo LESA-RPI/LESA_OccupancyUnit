@@ -4,21 +4,18 @@
 // Replacing 129.161.138.91 with the ip address of the PHP/MySQL node
 // using campus vm: 128.113.216.70
 //New URL format below
-//http://128.113.216.70/sendToDatabase.php?BID=0&RID=0&SID=0&PosX=0&PosY=0&Speed=0.5&Direction=90&Height=150&cieX=0.01&cieY=0.01&Time='2023-12-12 12:12:12'
+//http://128.113.216.70/sendToDatabase_test.php?column1=123&Time='2023-12-12 12:12:12'
 //ALTERNATIVE that also works: swapping out ip address with server name below
-//http://mdl-vm11.eng.rpi.edu/sendToDatabase.php?BID=0&RID=0&SID=0&PosX=0&PosY=0&Speed=0.5&Direction=90&Height=150&cieX=0.01&cieY=0.01&Time='2023-12-12 12:12:12'
+//http://mdl-vm11.eng.rpi.edu/sendToDatabase_test.php?column1=123&Time='2023-12-12 12:12:12'
 
 /*correct output in browser:
-INSERT INTO occupancy.sensor_data (Building_ID,Room_ID,Sensor_ID,Position_X,Position_Y,Speed,Direction,Height,RGB_CIE_X,RGB_CIE_Y,RGB_CIE_Z,Date_Time_Logged,Time_Captured) 
-VALUES (0, 0, 0, 0, 0, 0.5, 90, 150, 0.01, 0.01, 0.01, '2023-04-24 05:04:32', '2023-04-24 05:04:32');New record created successfully
+php file calledMySQL connectedINSERT INTO occupancy.test (column1) VALUES (123);New record created successfully
 */
 
 //TO DO: program needs to be able to breakup url with multiple occupants data into multiple entries.
 
 // Set the New york time as default timezone
 date_default_timezone_set('America/New_York');
-
-
 
 //echo "php file called";
 
@@ -38,6 +35,7 @@ if(isset($_GET["Color"])) {
    $password = "esp32io.com";
    $database_name = "db_sensor_data";*/
 
+   //  Database creditials
    $servername = "localhost";
    $username = "occupancy_user";
    $password = "#Occ_LESA_ToF#";
