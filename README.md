@@ -5,11 +5,19 @@ Based on STM's *BLE_MeshLightingPRFNode* example, this project gets data from th
 
 ### Overview
 ```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{HELLO}
-C --> a
+graph TD
+boot(Initilizaiton of STM32 and task registrations) ---> init(Sensor Init) --wait for init to finish--> standby{Standby};
+subgraph Appli_mesh.c & others
+standby --sw1 short press--> reply1(BLE color value advatisement);
+reply1-->standby
+standby --sw1 long press--> reply2(BLE ToF value advatisement);
+reply2---> standby
+standby --sw2 long press--> base(background set up)---> standby
+standby -->change{Color INT}-->sensor(wakes up ToF and data pulling)--No blobs present for long period-->standby
+standby --sw2 short press--> loopyloop1(ToF matrix to UART)
+loopyloop1--sw2 short press--> standby
+end
+
 ```
 
 ## How to use
