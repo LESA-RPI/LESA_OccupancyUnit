@@ -210,71 +210,62 @@ bool next_permutation(int *first, int *last) {
 	return true;
 }
 
-
 void link_latest_frame_to_previous(FIFObuffer *fifobuffer) {
-    if (fifobuffer->count == 0) {
-        return;
-    }
+	if (fifobuffer->count == 0) {
+		return;
+	}
 
-    FrameInfo *latest_frame = &(fifobuffer->buffer[fifobuffer->rear]);
-    if (fifobuffer->count == 1) {
-        for (int i = 0; i < latest_frame->num_blobs; i++) {
-            fifobuffer->current_ID++;
-            latest_frame->Blobs[i].ID = fifobuffer->current_ID;
-        }
-        return;
-    }
+	FrameInfo *latest_frame = &(fifobuffer->buffer[fifobuffer->rear]);
+	int second_latest_frame_index = (fifobuffer->rear + FIFO_SIZE - 1)
+			% FIFO_SIZE;
+	FrameInfo *second_latest_frame =
+			&(fifobuffer->buffer[second_latest_frame_index]);
 
-    int framesLookedBack = 0;
-    int second_latest_frame_index = (fifobuffer->rear + FIFO_SIZE - 1) % FIFO_SIZE;
-    int blobs_linked = 0;
+	if (fifobuffer->count == 1) {
+		for (int i = 0; i < latest_frame->num_blobs; i++) {
+			fifobuffer->current_ID++;
+			latest_frame->Blobs[i].ID = fifobuffer->current_ID;
+		}
+	} else {
+		int num_blobs = latest_frame->num_blobs;
+		int num_blobs_prev = second_latest_frame->num_blobs;
+		float min_distance = INFINITY;
+		int min_permutation[num_blobs];
+		int permutation[num_blobs];
+		for (int i = 0; i < num_blobs; i++) {
+			permutation[i] = i;
+		}
 
-    while (framesLookedBack < MAX_FRAMES_TO_LOOK_BACK && blobs_linked < latest_frame->num_blobs) {
-        framesLookedBack++;
-        second_latest_frame_index = (second_latest_frame_index + FIFO_SIZE - 1) % FIFO_SIZE;
-        FrameInfo *second_latest_frame = &(fifobuffer->buffer[second_latest_frame_index]);
+		do {
+			float distance_sum = 0.0f;
+			for (int i = 0; i < num_blobs; i++) {
+				if (permutation[i] < num_blobs_prev) {
+					float dx =
+							latest_frame->Blobs[i].center_of_mass.x
+									- second_latest_frame->Blobs[permutation[i]].center_of_mass.x;
+					float dy =
+							latest_frame->Blobs[i].center_of_mass.y
+									- second_latest_frame->Blobs[permutation[i]].center_of_mass.y;
+					distance_sum += sqrtf(dx * dx + dy * dy);
+				}
+			}
 
-        int num_blobs = latest_frame->num_blobs;
-        int num_blobs_prev = second_latest_frame->num_blobs;
+			if (distance_sum < min_distance) {
+				min_distance = distance_sum;
+				memcpy(min_permutation, permutation, sizeof(permutation));
+			}
+		} while (next_permutation(permutation, permutation + num_blobs));
 
-        float min_distance = INFINITY;
-        int min_permutation[num_blobs];
-        int permutation[num_blobs];
-        for (int i = 0; i < num_blobs; i++) {
-            permutation[i] = i;
-        }
-
-        do {
-            float distance_sum = 0.0f;
-            for (int i = 0; i < num_blobs; i++) {
-                if (permutation[i] < num_blobs_prev) {
-                    float dx = latest_frame->Blobs[i].center_of_mass.x - second_latest_frame->Blobs[permutation[i]].center_of_mass.x;
-                    float dy = latest_frame->Blobs[i].center_of_mass.y - second_latest_frame->Blobs[permutation[i]].center_of_mass.y;
-                    distance_sum += sqrtf(dx * dx + dy * dy);
-                }
-            }
-
-            if (distance_sum < min_distance) {
-                min_distance = distance_sum;
-                memcpy(min_permutation, permutation, sizeof(permutation));
-            }
-        } while (next_permutation(permutation, permutation + num_blobs));
-
-        for (int i = 0; i < num_blobs; i++) {
-            if (min_permutation[i] < num_blobs_prev && latest_frame->Blobs[i].ID == 0) {
-                latest_frame->Blobs[i].ID = second_latest_frame->Blobs[min_permutation[i]].ID;
-                blobs_linked++;
-            }
-        }
-    }
-
-    // Any blobs still not linked are new blobs
-    for (int i = 0; i < latest_frame->num_blobs; i++) {
-        if (latest_frame->Blobs[i].ID == 0) {
-            fifobuffer->current_ID++;
-            latest_frame->Blobs[i].ID = fifobuffer->current_ID;
-        }
-    }
+		for (int i = 0; i < num_blobs; i++) {
+			if (min_permutation[i] < num_blobs_prev) {
+				latest_frame->Blobs[i].ID =
+						second_latest_frame->Blobs[min_permutation[i]].ID;
+			} else {
+				fifobuffer->current_ID++;
+				latest_frame->Blobs[i].ID = fifobuffer->current_ID;
+			}
+		}
+	}
 }
 
 
