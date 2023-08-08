@@ -6,7 +6,7 @@
     - [ESP-TCS3430](https://github.com/IAmiku/LESA_OccupancyUnit/tree/main/NON-STM32%20Project%20Folder/ESP-TCS3430)
     - [ESP-TMD3725/readreg](https://github.com/IAmiku/LESA_OccupancyUnit/tree/main/NON-STM32%20Project%20Folder/ESP-TMD3725/readreg)
     - [ESPreceverArduino](https://github.com/IAmiku/LESA_OccupancyUnit/tree/main/NON-STM32%20Project%20Folder/ESPreceverArduino)
-2. 
+2. [STM32CubeIDE](https://github.com/IAmiku/LESA_OccupancyUnit/tree/main/STM32CubeIDE)
 
 
 Based on STM's *BLE_MeshLightingPRFNode* example, this project gets data from the ToF and color sensor. Bluetooth functionality has not been fully developed
