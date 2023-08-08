@@ -1,9 +1,7 @@
 # LESA_OccupancyUnit (BLE_MeshLightingPRFNode)
 ## Table of Contents
 - [Folder Navigation](##Folder-Navigation)
-- [Current Program Overview (STM32 occupancy detection)](#Current-Program-Overview-(STM32-occupancy-detection))
-- [Project Overview](#Project-Overview)
-- [Conituous ToF matrix pulling configeration](#Conituous-ToF-matrix-pulling-configeration)
+- [Flow charts](Flow-charts)
 - [How to use](#How-to-use)
 - [How it works](#How-it-works)
 - [How it runs](#How-it-runs)
@@ -24,6 +22,8 @@
 
 
 Based on STM's *BLE_MeshLightingPRFNode* example, this project gets data from the ToF and color sensor. Bluetooth functionality has not been fully developed
+
+## Flow charts
 
 ### Current Program Overview (STM32 occupancy detection)
 ```mermaid
