@@ -3,7 +3,7 @@
 
 Based on STM's *BLE_MeshLightingPRFNode* example, this project gets data from the ToF and color sensor. Bluetooth functionality has not been fully developed
 
-### Overview
+### Current Project Overview (STM32 occupancy detection)
 ```mermaid
 graph TD
 boot(Initilizaiton of STM32 and task registrations) ---> init(Sensor Init) --wait for init to finish--> standby{Standby};
@@ -17,8 +17,23 @@ standby -->change{Color INT}-->sensor(wakes up ToF and data pulling)--No blobs p
 standby --sw2 short press--> loopyloop1(ToF matrix to UART)
 loopyloop1--sw2 short press--> standby
 end
-
 ```
+
+### Conituous ToF matrix pulling configeration
+
+```mermaid
+graph TD
+
+server[Server]
+esp[EPS32]
+server <--HTTP--> esp
+subgraph Module
+stm[STM32] <--UART--> esp
+stm <--I2C--> colorsensor[ColorS]
+stm <--I2C--> tof[ToF]
+end
+```
+
 
 ## How to use
 In order to use this project you must download this entire repository and open the `.project` file in the STM32CubeIDE folder:
