@@ -13,7 +13,7 @@ C --> a
 ```
 
 ## How to use
-In order to use this project you must download this entire repository and open the '.project' file in the STM32CubeIDE folder:
+In order to use this project you must download this entire repository and open the `.project` file in the STM32CubeIDE folder:
 
 
 | <img src="https://github.com/IAmiku/LESA_OccupancyUnit/assets/28797384/7b4293d4-111c-4e78-a1c0-8d8e865e68df" width="450" /> | <img src="https://github.com/IAmiku/LESA_OccupancyUnit/assets/28797384/2f35a595-6f8a-4ca5-84a6-371e19c2acde" width="450" /> |
