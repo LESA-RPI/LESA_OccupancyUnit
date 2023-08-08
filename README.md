@@ -1,6 +1,6 @@
 # BLE_MeshLightingPRFNode
 
-Based on STM's BLE_MeshLightingPRFNode example, this project gets data from the ToF and color sensor. Due to the incompetance of our ability, we have not figued 
+Based on STM's BLE_MeshLightingPRFNode example, this project gets data from the ToF and color sensor. Due to the incompetance of our ability, in order to use our project, you have to do the following: 
 
 
 
