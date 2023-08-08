@@ -24,7 +24,7 @@
 
 [TCS3430 (Tristimulus Sensor)](#TCS3430-(Tristimulus-Sensor))
 
-[Summer Team Contact Information:](#Summer-Team-Contact-Information:)
+[Summer Team Contact Information](#Summer-Team-Contact-Information)
 
 
 ## Folder Navigation
@@ -217,7 +217,7 @@ Reference:
 
 https://wiki.st.com/stm32mcu/wiki/Connectivity:STM32WB_BLE_MESH_Sensor_Model#/media/File:Connectivity_sensor-demo12.png
 
-### Summer Team Contact Information:
+### Summer Team Contact Information
 
 •	link10@rpi.edu 
 
