@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (11.3.rel1)
+# Toolchain: GNU Tools for STM32 (10.3-2021.10)
 ################################################################################
 
 -include ../makefile.init
@@ -22,6 +22,24 @@ RM := rm -rf
 -include Drivers/BSP/tmd3725/subdir.mk
 -include Drivers/BSP/TCS3430/subdir.mk
 -include Drivers/BSP/P-NUCLEO-WB55.Nucleo/subdir.mk
+-include Debug-remove/Middlewares/STM32_WPAN/utilities/subdir.mk
+-include Debug-remove/Middlewares/STM32_WPAN/interface/patterns/ble_thread/tl/subdir.mk
+-include Debug-remove/Middlewares/STM32_WPAN/interface/patterns/ble_thread/shci/subdir.mk
+-include Debug-remove/Middlewares/STM32_WPAN/ble/core/subdir.mk
+-include Debug-remove/Middlewares/STM32_WPAN/ble/blesvc/subdir.mk
+-include Debug-remove/Drivers/STM32WBxx_HAL_Driver/subdir.mk
+-include Debug-remove/Drivers/CMSIS/subdir.mk
+-include Debug-remove/Drivers/BSP/vl53l8cx/porting/subdir.mk
+-include Debug-remove/Drivers/BSP/vl53l8cx/modules/subdir.mk
+-include Debug-remove/Drivers/BSP/vl53l8cx/subdir.mk
+-include Debug-remove/Drivers/BSP/tmd3725/subdir.mk
+-include Debug-remove/Drivers/BSP/TCS3430/subdir.mk
+-include Debug-remove/Drivers/BSP/P-NUCLEO-WB55.Nucleo/subdir.mk
+-include Debug-remove/Application/Startup/subdir.mk
+-include Debug-remove/Application/STM32_WPAN/target/subdir.mk
+-include Debug-remove/Application/STM32_WPAN/app/subdir.mk
+-include Debug-remove/Application/Core/subdir.mk
+-include Debug-remove/subdir.mk
 -include Application/Startup/subdir.mk
 -include Application/STM32_WPAN/target/subdir.mk
 -include Application/STM32_WPAN/app/subdir.mk
@@ -77,8 +95,8 @@ all: main-build
 main-build: BLE_MeshLightingPRFNode.elf secondary-outputs
 
 # Tool invocations
-BLE_MeshLightingPRFNode.elf BLE_MeshLightingPRFNode.map: $(OBJS) $(USER_OBJS) C:\Users\jason\OneDrive\Documents\GitHub\LESA_OccupancyUnit\STM32CubeIDE\STM32WB55RGVX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "BLE_MeshLightingPRFNode.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\jason\OneDrive\Documents\GitHub\LESA_OccupancyUnit\STM32CubeIDE\STM32WB55RGVX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLE_MeshLightingPRFNode.map" -Wl,--gc-sections -static -L../../Middlewares/ST/STM32_WPAN/ble/mesh/Library --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+BLE_MeshLightingPRFNode.elf BLE_MeshLightingPRFNode.map: $(OBJS) $(USER_OBJS) C:\STM\workspace\BLE_MeshLightingPRFNode\STM32CubeIDE\STM32WB55RGVX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "BLE_MeshLightingPRFNode.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\STM\workspace\BLE_MeshLightingPRFNode\STM32CubeIDE\STM32WB55RGVX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLE_MeshLightingPRFNode.map" -Wl,--gc-sections -static -L../../Middlewares/ST/STM32_WPAN/ble/mesh/Library --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

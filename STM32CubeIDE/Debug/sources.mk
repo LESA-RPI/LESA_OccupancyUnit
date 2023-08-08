@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (11.3.rel1)
+# Toolchain: GNU Tools for STM32 (10.3-2021.10)
 ################################################################################
 
 ELF_SRCS := 
@@ -27,6 +27,24 @@ Application/Core \
 Application/STM32_WPAN/app \
 Application/STM32_WPAN/target \
 Application/Startup \
+Debug-remove/Application/Core \
+Debug-remove/Application/STM32_WPAN/app \
+Debug-remove/Application/STM32_WPAN/target \
+Debug-remove/Application/Startup \
+Debug-remove \
+Debug-remove/Drivers/BSP/P-NUCLEO-WB55.Nucleo \
+Debug-remove/Drivers/BSP/TCS3430 \
+Debug-remove/Drivers/BSP/tmd3725 \
+Debug-remove/Drivers/BSP/vl53l8cx/modules \
+Debug-remove/Drivers/BSP/vl53l8cx/porting \
+Debug-remove/Drivers/BSP/vl53l8cx \
+Debug-remove/Drivers/CMSIS \
+Debug-remove/Drivers/STM32WBxx_HAL_Driver \
+Debug-remove/Middlewares/STM32_WPAN/ble/blesvc \
+Debug-remove/Middlewares/STM32_WPAN/ble/core \
+Debug-remove/Middlewares/STM32_WPAN/interface/patterns/ble_thread/shci \
+Debug-remove/Middlewares/STM32_WPAN/interface/patterns/ble_thread/tl \
+Debug-remove/Middlewares/STM32_WPAN/utilities \
 Drivers/BSP/P-NUCLEO-WB55.Nucleo \
 Drivers/BSP/TCS3430 \
 Drivers/BSP/tmd3725 \
