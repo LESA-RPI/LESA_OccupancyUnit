@@ -1,14 +1,16 @@
 # LESA_OccupancyUnit (BLE_MeshLightingPRFNode)
+
+
 ## Table of Contents
-- [Folder Navigation](#Folder-Navigation)
-- [Flow charts](#Flow-charts)
-- [How to use](#How-to-use)
-- [How it works](#How-it-works)
-- [How it runs](#How-it-runs)
-- [Bluetooth setting](#Bluetooth-setting)
-- [Tracking Algorithm](#Tracking-Algorithm)
-- [Sensor related files](#Sensor-related-files)
-- [Summer Team Contact Information](#Summer-Team-Contact-Information)
+- [Folder Navigation](#folder-navigation)
+- [Flow charts](#flow-charts)
+- [How to use](#how-to-use)
+- [How it works](#how-it-works)
+- [How it runs](#how-it-runs)
+- [Bluetooth setting](#bluetooth-setting)
+- [Tracking Algorithm](#tracking-algorithm)
+- [Sensor related files](#sensor-related-files)
+- [Summer Team Contact Information](#summer-team-contact-information)
 
 
 ## Folder Navigation
