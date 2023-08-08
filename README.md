@@ -44,6 +44,36 @@ In order to use this project you must download this entire repository and open t
 | This is how the files should be placed in the workspace folder | Open the project by clicking the .project file |
 
 
+## How it works
+
+### How it runs
+
+The example software provided by ST uses a sequencer library for scheduling tasks. 
+
+Before using the sequencer it must be initialized by a call to the function :
+
+`UTIL_SEQ_Init( void )`
+
+A function is registered as a task in the sequencer by
+
+`UTIL_SEQ_RegTask( UTIL_SEQ_bm_t TaskId_bm, uint32_t Flags, void (*Task)( void ) )`
+
+The first parameter is the task ID and is a 32-bit value where only one bit should be set, i.e. 
+the maximum number of tasks is 32. The second parameter is not used for anything by the library, and the third parameter is a pointer to the function which should be called when it is time for the task to run.
+
+To request a task to be runned, use function 
+
+`UTIL_SEQ_SetTask( UTIL_SEQ_bm_t TaskId_bm , uint32_t Task_Prio )`
+
+Example:
+```
+UTIL_SEQ_Init( void )
+UTIL_SEQ_RegTask((1 << 4), UTIL_SEQ_RFU, my_task_function);
+UTIL_SEQ_SetTask((1 << 4), CFG_SEQ_Prio_0);
+```
+
+### Bluetooth setting
+
 ## Tracking Algorithm
 
 [`Tracking_Algo.h`](Core/Inc/Tracking_Algo.h) Function declerations and Macro settings for STM32
