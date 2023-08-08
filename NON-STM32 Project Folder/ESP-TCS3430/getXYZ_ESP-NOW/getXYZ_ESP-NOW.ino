@@ -33,6 +33,7 @@ DFRobot_TCS3430 TCS3430;
 //#define SDA 5
 
 void setup() {
+  //Setup serial, wifi connection, and sensor connection
   Serial.begin(115200);
   WiFi.mode(WIFI_STA);
   if (esp_now_init() != ESP_OK) {
@@ -43,6 +44,7 @@ void setup() {
   memcpy(peerInfo.peer_addr, broadcastAddress, 6);
   peerInfo.channel = 0;
   peerInfo.encrypt = false;
+  
   //Add peer
   if (esp_now_add_peer(&peerInfo) != ESP_OK){
     Serial.println("Failed to add peer");
@@ -57,14 +59,19 @@ void setup() {
 }
 
 void loop() {
+  // Obtain sensor data
   uint16_t X = TCS3430.getXData();
   uint16_t Y = TCS3430.getYData();
   uint16_t Z = TCS3430.getZData();
   uint16_t IR1Data = TCS3430.getIR1Data();
   //uint16_t IR2Data = TCS3430.getIR2Data();
+  
+  //Calculate color values
   int R =  3.2404542*X - 1.5371385*Y - 0.4985314*Z;
   int G = -0.9692660*X + 1.8760108*Y + 0.0415560*Z;
   int B =  0.0556434*X - 0.2040259*Y + 1.0572252*Z;
+
+  // Parse data string
   String str = "X : " + String(X) + "    Y : " + String(Y) + "    Z : " +  String(Z) + "    IR1 : "+String(IR1Data)
   + "    R : " +  String(R) + "    G : " +  String(G) + "    B : " +  String(B) ;// + "    IR2 : "+String(IR2Data);
   Serial.print(str);
@@ -76,6 +83,8 @@ void loop() {
   myData.XYZ[4]=Z;myData.XYZ[5]=Z>>8;
   //Serial.printf("%x%x",X,(myData.XYZ[1])<<8|myData.XYZ[0]);
   //Serial.println((myData.XYZ[1])<<8|myData.XYZ[0]);
+
+  // Send data
   esp_err_t result = esp_now_send(broadcastAddress, (uint8_t *) &myData, sizeof(myData));
   if (result == ESP_OK) {
     //Serial.println("Sent with success");
