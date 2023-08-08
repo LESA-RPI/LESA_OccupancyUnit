@@ -13,7 +13,7 @@ C --> a
 ```
 
 ## How to use
-Due to the summer team's incompetence, in order to use this project, you must create the following workspace `C:\STM\workspace\BLE_MeshLightingPRFNode\...`, and copy this entire repositoriy into the aforementioned workspace
+Due to the summer team's incompetence, in order to use this project you must create the following workspace `C:\STM\workspace\BLE_MeshLightingPRFNode\...`, and copy this entire repository into the aforementioned workspace
 
 ![image](https://github.com/IAmiku/LESA_OccupancyUnit/assets/28797384/7b4293d4-111c-4e78-a1c0-8d8e865e68df)
 
