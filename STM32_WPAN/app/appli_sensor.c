@@ -409,9 +409,10 @@ MOBLE_RESULT Appli_Sensor_ReadValue(MOBLEUINT8 sensorOffset,
 	  #endif
 
 	  #if (1) //TCS3430
-	  //TRACE_M(TF_SENSOR_M, "INITIAL_CIE_1931_CHROMATICITY_COORDINATES_PID");
+	  TRACE_M(TF_SENSOR_M, "INITIAL_CIE_1931_CHROMATICITY_COORDINATES_PID");
 	  tcs3430_optics_val color_data;
 	  tcs3430 sensor = { {0}, {0} };
+	  TCS3430_print_reg(&sensor);
 	  color_data = get_raw_XYZ(&sensor);
 	  TCS3430_print_color(&color_data);
 	  //clear
@@ -440,14 +441,14 @@ MOBLE_RESULT Appli_Sensor_ReadValue(MOBLEUINT8 sensorOffset,
   }
   case TIME_OF_FLIGHT_PID:
   {
-	  //TRACE_M(TF_SENSOR_M, "TIME_OF_FLIGHT_PID");
+	  TRACE_M(TF_SENSOR_M, "TIME_OF_FLIGHT_PID");
 
 	  RANGING_SENSOR_Result_t Result;
 	  int32_t status = CUSTOM_RANGING_SENSOR_GetDistance(CUSTOM_VL53L8CX, &Result);
 	  while (status!=0)
 	  {    status = CUSTOM_RANGING_SENSOR_GetDistance(CUSTOM_VL53L8CX, &Result);
 	  }
-	  //print_result(&Result);
+	  print_result(&Result);
 
 	  for(int i = 0; i<64;i++){
 		  uint16_t temp = Result.ZoneResult[i].Distance[0];

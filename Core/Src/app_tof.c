@@ -38,7 +38,7 @@ extern "C" {
 /* Private define ------------------------------------------------------------*/
 /* uncomment following to use directly the bare driver instead of the BSP */
 /* #define USE_BARE_DRIVER */
-#define TIMING_BUDGET (30U) /* 5 ms < TimingBudget < 100 ms */
+#define TIMING_BUDGET (5U) /* 5 ms < TimingBudget < 100 ms */
 #define RANGING_FREQUENCY (20U) /* Ranging frequency Hz (shall be consistent with TimingBudget value) */
 #define POLLING_PERIOD (1000U/RANGING_FREQUENCY) /* refresh rate for polling mode (milliseconds) */
 
@@ -78,7 +78,7 @@ void MX_TOF_Init(void)
   /* USER CODE END TOF_Init_PreTreatment */
 
   /* Initialize the peripherals and the TOF components */
-TRACE_M(TF_SENSOR, "CUSTOM_RANGING_SENSOR_Init");
+  TRACE_M(TF_SENSOR, "CUSTOM_RANGING_SENSOR_Init");
   MX_VL53L8CX_SimpleRanging_Init();
 
   uint32_t Id;
@@ -94,14 +94,17 @@ TRACE_M(TF_SENSOR, "CUSTOM_RANGING_SENSOR_Init");
   /* set the profile if different from default one */
   CUSTOM_RANGING_SENSOR_ConfigProfile(CUSTOM_VL53L8CX, &Profile);
 
-  status = CUSTOM_RANGING_SENSOR_Start(CUSTOM_VL53L8CX, RS_MODE_BLOCKING_CONTINUOUS);
-
-
   /* USER CODE BEGIN TOF_Init_PostTreatment */
 
   /* USER CODE END TOF_Init_PostTreatment */
 }
 
+void MX_TOF_Begin(void){
+	CUSTOM_RANGING_SENSOR_Start(CUSTOM_VL53L8CX, RS_MODE_BLOCKING_CONTINUOUS);
+}
+void MX_TOF_Stop(void){
+	CUSTOM_RANGING_SENSOR_Stop(CUSTOM_VL53L8CX);
+}
 /*
  * LM background task
  */
@@ -134,7 +137,7 @@ static void MX_VL53L8CX_SimpleRanging_Init(void)
 
 #ifdef USE_BARE_DRIVER
 #else
-static void MX_VL53L8CX_SimpleRanging_Process(void)
+static void MX_VL53L8CX_SimpleRanging_Process(void)//NOT BEING USED
 {
   static RANGING_SENSOR_Result_t Result;
   status = CUSTOM_RANGING_SENSOR_GetDistance(CUSTOM_VL53L8CX, &Result);
@@ -164,11 +167,23 @@ void MX_TOF_ToggleReso(void)
 	toggle_resolution();
 }
 
+// Function to parse RANGING_SENSOR_Result_t to [8][8] matrix
+void parse_TOF_result(RANGING_SENSOR_Result_t* result, int  matrix[8][8]) {
+    //assign values from result
+    uint8_t j, k;
+    for (j = 0; j < 8; j ++) {//row
+        for (k = 0; k < 8; k++) {//column
+            matrix[j][k] = (int)*result->ZoneResult[j*8+k].Distance; //matrix[1][0]=result[8=1*8+0], matrix[1][7]=result[15=1*8+7]
+        }
+    }
+    return;
+}
 
 void print_result(RANGING_SENSOR_Result_t *Result)
 {
 
-#if(0)
+#if(1)
+	//display_commands_banner();
   int8_t i, j, k, l;
   uint8_t zones_per_line;
 
@@ -200,7 +215,7 @@ void print_result(RANGING_SENSOR_Result_t *Result)
           }
         }
         else
-          printf("|%5s:%5s", "X", "X");
+          printf("|%5s:%d", "X",j+k);
       }
       printf("|\n\r");
     }

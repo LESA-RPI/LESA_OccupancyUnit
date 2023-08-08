@@ -23,6 +23,7 @@
 #include "main.h"
 #include "app_entry.h"
 #include "app_ble.h"
+#include "app_conf.h"
 #include "ble.h"
 #include "tl.h"
 #include "stm32_seq.h"
@@ -116,6 +117,7 @@ static void Button_Init( void );
 /* USER CODE END PFP */
 
 uint8_t Mesh_Stop_Mode;
+uint8_t Senor_Working = 1;
 
 /* Functions Definition ------------------------------------------------------*/
 void MX_APPE_Config( void )
@@ -590,6 +592,7 @@ static void Button_Init( void )
   BSP_PB_Init(BUTTON_SW1, BUTTON_MODE_EXTI);
   BSP_PB_Init(BUTTON_SW2, BUTTON_MODE_EXTI);
   BSP_PB_Init(BUTTON_SW3, BUTTON_MODE_EXTI);
+  BSP_PB_Init(COLOR_INT, BUTTON_MODE_EXTI);
 #endif
 
   return;
@@ -725,6 +728,16 @@ void HAL_GPIO_EXTI_Callback( uint16_t GPIO_Pin )
     case BUTTON_SW1_PIN:
       {
         UTIL_SEQ_SetTask( 1<<CFG_TASK_MESH_SW1_REQ_ID, CFG_SCH_PRIO_0);
+      }
+      break;
+    case BUTTON_SW2_PIN:
+      {
+        UTIL_SEQ_SetTask( 1<<CFG_TASK_MESH_SW2_REQ_ID, CFG_SCH_PRIO_0);
+      }
+      break;
+    case COLOR_INT_PIN: //PC2
+      {
+        UTIL_SEQ_SetTask( 1<<CFG_TASK_MESH_COLOR_REQ_ID, CFG_SCH_PRIO_0);
       }
       break;
 

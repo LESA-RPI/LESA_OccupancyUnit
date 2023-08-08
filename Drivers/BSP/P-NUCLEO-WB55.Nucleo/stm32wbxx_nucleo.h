@@ -68,6 +68,7 @@ typedef enum
   BUTTON_SW1 = 0,
   BUTTON_SW2 = 1,
   BUTTON_SW3 = 2,
+  COLOR_INT  = 3,
 } Button_TypeDef;
 
 typedef enum
@@ -184,7 +185,7 @@ typedef enum
 /** @defgroup STM32WBXX_NUCLEO_BUTTON BUTTON Constants
   * @{
   */
-#define BUTTONn                                 3
+#define BUTTONn                                 4
 
 /**
  * @brief Key push-buttons
@@ -221,6 +222,18 @@ typedef enum
 #else
 #define BUTTON_SW3_EXTI_IRQn                    EXTI1_IRQn
 #endif /* CORE_CM0PLUS */
+
+#define COLOR_INT_PIN                          GPIO_PIN_2
+#define COLOR_INT_GPIO_PORT                    GPIOC
+#define COLOR_INT_GPIO_CLK_ENABLE()            __HAL_RCC_GPIOC_CLK_ENABLE()
+#define COLOR_INT_GPIO_CLK_DISABLE()           __HAL_RCC_GPIOC_CLK_DISABLE()
+#define COLOR_INT_EXTI_LINE                    GPIO_PIN_2
+#ifdef CORE_CM0PLUS
+#define COLOR_INT_EXTI_IRQn                    EXTI2_0_IRQn
+#else
+#define COLOR_INT_EXTI_IRQn                    EXTI2_IRQn
+#endif /* CORE_CM0PLUS */
+
 
 #define BUTTONx_GPIO_CLK_ENABLE(__INDEX__)    do { if ((__INDEX__) == BUTTON_SW1) BUTTON_SW1_GPIO_CLK_ENABLE(); else \
                                               if ((__INDEX__) == BUTTON_SW2) BUTTON_SW2_GPIO_CLK_ENABLE(); else \

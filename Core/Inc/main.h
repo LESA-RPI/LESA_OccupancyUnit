@@ -77,6 +77,8 @@ void   MX_USART1_UART_Init(void);
 #define B2_GPIO_Port GPIOD
 #define B3_Pin GPIO_PIN_1
 #define B3_GPIO_Port GPIOD
+#define C_Pin GPIO_PIN_2
+#define C_GPIO_Port GPIOC
 #define JTDO_Pin GPIO_PIN_3
 #define JTDO_GPIO_Port GPIOB
 #define LD1_Pin GPIO_PIN_5

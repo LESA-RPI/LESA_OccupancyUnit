@@ -76,9 +76,8 @@ Application/Core/app_entry.o: \
  ../../Middlewares/ST/STM32_WPAN/stm32_wpan_common.h \
  ../../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/tl.h \
- ../../Middlewares/ST/STM32_WPAN/ble/ble.h \
- ../../STM32_WPAN/app/ble_conf.h ../../Core/Inc/app_conf.h \
- ../../STM32_WPAN/app/ble_dbg_conf.h \
+ ../../Core/Inc/app_conf.h ../../Middlewares/ST/STM32_WPAN/ble/ble.h \
+ ../../STM32_WPAN/app/ble_conf.h ../../STM32_WPAN/app/ble_dbg_conf.h \
  ../../Middlewares/ST/STM32_WPAN/ble/core/ble_core.h \
  ../../Middlewares/ST/STM32_WPAN/ble/core/ble_std.h \
  ../../Middlewares/ST/STM32_WPAN/ble/core/ble_defs.h \
@@ -220,9 +219,9 @@ Application/Core/app_entry.o: \
 ../../Middlewares/ST/STM32_WPAN/stm32_wpan_common.h:
 ../../Drivers/CMSIS/Include/cmsis_compiler.h:
 ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/tl.h:
+../../Core/Inc/app_conf.h:
 ../../Middlewares/ST/STM32_WPAN/ble/ble.h:
 ../../STM32_WPAN/app/ble_conf.h:
-../../Core/Inc/app_conf.h:
 ../../STM32_WPAN/app/ble_dbg_conf.h:
 ../../Middlewares/ST/STM32_WPAN/ble/core/ble_core.h:
 ../../Middlewares/ST/STM32_WPAN/ble/core/ble_std.h:

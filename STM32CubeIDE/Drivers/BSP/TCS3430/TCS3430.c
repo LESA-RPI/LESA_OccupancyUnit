@@ -14,7 +14,7 @@
 tcs3430 sensor = { {0}, {0} };
 tcs3430_optics_val XYZ_data;
 int32_t ret;
-
+int16_t interruptrange = 255;
 
 int32_t get_data(uint8_t *reginfo)
 {
@@ -32,7 +32,7 @@ int32_t get_data(uint8_t *reginfo)
     // TODO ADD ERROR CHECKING
 	HAL_StatusTypeDef ret;
 
-	for(int i = 0; i < 24; i++)
+	for(int i = 0; i < 25; i++)
 	{
 		ret = BSP_I2C1_ReadReg(TCS3430_ADDR, addr[i], reginfo+i, 1);
 		if(ret != BSP_ERROR_NONE) break;
@@ -89,7 +89,12 @@ int32_t set_cfg1(uint8_t *reginfo, uint8_t ALS_Mul, uint8_t again_flag)
 	/*
 	 * FUNCTION: Change the gain and IR2 setting
 	 * ---------
+<<<<<<< Updated upstream
 	 * INPUT: reginfo[24] - current values of all registers
+=======
+	 * INPUT: fd - the file descriptor of the i2c device
+	 *        reginfo[25] - current values of all registers
+>>>>>>> Stashed changes
 	 *        ALS_Mul - Sets the CH3 input. Default = 0 (X Channel). Set to 1 to read IR2.
 	 *        again_flag - [x1 - gain of 1, x4 - gain of 4, x16 - gain of 16, x64 - gain of 64]
 	 * RETURN: 0 - success
@@ -138,16 +143,16 @@ int32_t set_cfg2(uint8_t *reginfo, uint8_t mode)
 	 */
 	if(mode)
 	{
-		reginfo[19] |= 0x10;
+		reginfo[21] |= 0x10;
 	}
 	else
 	{
-		reginfo[19] &= 0x04;
+		reginfo[21] &= 0x04;
 	}
-	ret = BSP_I2C1_WriteReg(TCS3430_ADDR, CFG2_ADDR, reginfo+20, 1);
+	ret = BSP_I2C1_WriteReg(TCS3430_ADDR, CFG2_ADDR, reginfo+21, 1);
 }
 
-int32_t set_cfg3(uint8_t *reginfo, uint8_t mode, uint8_t sai)
+int32_t set_cfg3(uint8_t *reginfo, uint8_t mode, uint8_t sai)//Mode all flag bit
 {
 	/*
 	 * FUNCTION:
@@ -160,23 +165,23 @@ int32_t set_cfg3(uint8_t *reginfo, uint8_t mode, uint8_t sai)
 	 */
 	if(mode)
 	{
-		reginfo[20] |= 0x80;
+		reginfo[22] |= 0x80;
 	}
 	else
 	{
-		reginfo[20] &= 0x7F;
+		reginfo[22] &= 0x7F;
 	}
 
 	if(sai)
 	{
-		reginfo[20] |= 0x10;
+		reginfo[22] |= 0x10;
 	}
 	else
 	{
-		reginfo[20] &= 0xEF;
+		reginfo[22] &= 0xEF;
 	}
 
-	ret = BSP_I2C1_WriteReg(TCS3430_ADDR, CFG3_ADDR, reginfo+21, 1);
+	ret = BSP_I2C1_WriteReg(TCS3430_ADDR, CFG3_ADDR, reginfo+22, 1);
 
 	return ret;
 }
@@ -195,23 +200,23 @@ int32_t set_AutoZeroMode(uint8_t *reginfo, uint8_t mode, uint8_t AZ_ITERATION)
      */
     if (mode)
     {
-        reginfo[22] |= 0x80;
+        reginfo[23] |= 0x80;
     }
     else
     {
-        reginfo[22] &= 0x7F;
+        reginfo[23] &= 0x7F;
     }
 
     if(AZ_ITERATION == 0x7F)
     {
-    	reginfo[22] |= 0x7F;
+    	reginfo[23] |= 0x7F;
     }
     else
     {
-    	reginfo[22] &= 0x80;
+    	reginfo[23] &= 0x80;
     }
 
-    ret = BSP_I2C1_WriteReg(TCS3430_ADDR, AZ_CONFIG_ADDR, reginfo+22, 1);
+    ret = BSP_I2C1_WriteReg(TCS3430_ADDR, AZ_CONFIG_ADDR, reginfo+23, 1);
 
     return ret; // Assuming 'ret' is a valid public variable accessible within the scope of this function
 }
@@ -230,23 +235,23 @@ int32_t set_ALSInterrupt(uint8_t *reginfo, uint8_t AIEN, uint8_t ASIEN)
 	 */
 	if(AIEN)
 	{
-		reginfo[23] |= 0x08;
+		reginfo[24] |= 0x10;
 	}
 	else
 	{
-		reginfo[23] &= 0xF0;
+		reginfo[24] &= 0xEF;
 	}
 
 	if(ASIEN)
 	{
-		reginfo[23] |= 0x80;
+		reginfo[24] |= 0x80;
 	}
 	else
 	{
-		reginfo[23] &= 0x7F;
+		reginfo[24] &= 0x7F;
 	}
 
-	ret = BSP_I2C1_WriteReg(TCS3430_ADDR, AZ_CONFIG_ADDR, reginfo+23, 1);
+	ret = BSP_I2C1_WriteReg(TCS3430_ADDR, INTENAB_ADDR, reginfo+24, 1);
 
 	return ret;
 }
@@ -395,25 +400,57 @@ void TCS3430_print_color(const tcs3430_optics_val *color_data) {
      */
 
     /* formatting the data to left aligned, zero decimal, width of eight floats */
-    //printf( """\n\r|X\t|Y\t|Z\t|IR\t|LUX\t|CCT\t|\n\r|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|\r\n",
-    //		color_data->X, color_data->Y, color_data->Z, color_data->IR, color_data->Lux, color_data->CCT);//*/
+    printf( """\n\r|X\t|Y\t|Z\t|IR\t|LUX\t|CCT\t|\n\r|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|\r\n",
+    		color_data->X, color_data->Y, color_data->Z, color_data->IR, color_data->Lux, color_data->CCT);//*/
 
-	printf("%x|%x|%x|",color_data->X, color_data->Y, color_data->Z );
+	//printf("%x|%x|%x|",color_data->X, color_data->Y, color_data->Z );
 	//fflush(stdout);
 	/*
     write(stdout,color_data->X,2);
     write(stdout,color_data->Y,2);
     write(stdout,color_data->Z,2);*/
-
 }
 
 int32_t begin(tcs3430 *sensor_t)
 {
 	softReset(sensor_t->reginfo);
-	ret = get_data(sensor_t->reginfo);
+	ret = set_ALSInterrupt(sensor_t->reginfo, 0, 0);   //enable als interrupt
+	ret = set_cfg3(sensor_t->reginfo,0,0); // enable als interrupt SC
+	set_IRT_Cycle(sensor_t->reginfo,1); // multiple occurance of ALS interrupt
+	Update_ALSThreshold(sensor_t);
+	reset_Status(sensor_t->reginfo);
+	BSP_I2C1_WriteReg(TCS3430_ADDR, WTIME_ADDR, &(sensor_t->reginfo[2]), 1);
+
 	ret = enable_sensor(sensor_t->reginfo, 0, 1);
+	ret = get_data(sensor_t->reginfo);//copy from sensor
+
+
 	return ret;
 }
+int MinV(uint16_t x, uint16_t y) {
+    return x < y ? x : y;
+}
+int MaxV(uint16_t x, uint16_t y) {
+    return x < y ? x : y;
+}
+
+void Update_ALSThreshold(tcs3430 *sensor_t){
+	XYZ_data = get_raw_XYZ(sensor_t);
+	//TODO: incoperate the above into the following
+	int temp =XYZ_data.Z;
+	if (temp<Range){
+		temp = Range;
+	}else if ((temp+Range)>65525){
+		temp = 65525-Range;
+	}
+	set_ALS_THR_LOW(sensor_t->reginfo,temp-Range);
+	set_ALS_THR_HIGH(sensor_t->reginfo,temp+Range);
+	printf("\n\rNew Low:%d New High:%d\n\r",temp-Range,temp+Range);
+	reset_Status(sensor_t->reginfo);
+	set_ALSInterrupt(sensor_t->reginfo, 1, 0);   //enable als interrupt
+}
+
+
 
 void Color_Init()
 {
@@ -422,6 +459,104 @@ void Color_Init()
 void Color_Process(){
 
 	XYZ_data = get_raw_XYZ(&sensor);
-	print_color(&XYZ_data);
+	TCS3430_print_color(&XYZ_data);
 
 }
+
+void set_ALS_THR_LOW(uint8_t *reginfo, uint16_t val)
+{
+	if(val > 65525)
+	{
+		return;
+	}
+
+	uint16_t value = val;
+
+	uint8_t low = value;
+	reginfo[3] = low;
+
+	uint8_t high = value >> 8;
+	reginfo[4] = high;
+
+	ret = BSP_I2C1_WriteReg(TCS3430_ADDR, AILTL_ADDR, reginfo+3, 1);
+	ret = BSP_I2C1_WriteReg(TCS3430_ADDR, AILTH_ADDR, reginfo+4, 1);
+
+
+}
+
+void set_ALS_THR_HIGH(uint8_t *reginfo, uint16_t val)
+{
+	if(val > 65525)
+	{
+		return;
+	}
+	uint16_t value = val;
+
+	uint8_t low = value;
+	reginfo[5] = low;
+
+	uint8_t high = value >> 8;
+	reginfo[6] = high;
+
+	ret = BSP_I2C1_WriteReg(TCS3430_ADDR, AIHTL_ADDR, reginfo+5, 1);
+	ret = BSP_I2C1_WriteReg(TCS3430_ADDR, AIHTH_ADDR, reginfo+6, 1);
+
+
+}
+
+void set_IRT_Cycle(uint8_t *reginfo, uint8_t cycle)
+{
+	if(cycle > 15)
+	{
+		cycle = 15;
+	}
+	reginfo[7] = cycle;
+	ret = BSP_I2C1_WriteReg(TCS3430_ADDR, PERS_ADDR, reginfo+7, 1);
+
+
+}
+
+void TCS3430_print_reg(tcs3430 *sensor_t) {
+	{
+
+		int addr[] = {0x80, 0x81, 0x83, 0x84, 0x85, 0x86, 0x87, 0x8C,
+					0x8D, 0x90, 0x91, 0x92, 0x93, 0x94, 0x95, 0x96, 0x97,
+					0x98, 0x99, 0x9A, 0x9B, 0x9F, 0xAB, 0xD6, 0xDD};
+
+
+		for(int i = 0; i < 25; i++)
+		{
+			BSP_I2C1_ReadReg(TCS3430_ADDR, addr[i], &(sensor_t->reginfo[i]), 1);
+			printf("%x---%d---%x\n\r",addr[i],i,(sensor_t->reginfo[i]));
+			if(ret != BSP_ERROR_NONE) break;
+		}
+		ret = BSP_I2C1_WriteReg(TCS3430_ADDR, STATUS_ADDR, &(sensor_t->reginfo[12]), 0x10);
+
+	}
+
+}
+
+int32_t reset_Status(uint8_t *reginfo)
+{
+	reginfo[12] = 0xFF;
+	ret = BSP_I2C1_WriteReg(TCS3430_ADDR, STATUS_ADDR, reginfo+12, 1);
+
+	return ret;
+}
+
+void colordiff (tcs3430_optics_val base, tcs3430_optics_val current, float * delta_X, float * delta_Y){
+    //calculate cie color
+    float base_x,base_y,curr_x,curr_y;
+    base_x = (float)base.X/(float)(base.X+base.Y+base.Z)*100;
+    base_y = (float)base.Y/(float)(base.X+base.Y+base.Z)*100;
+    curr_x = (float)current.X/(float)(current.X+current.Y+current.Z)*100;
+    curr_y = (float)current.Y/(float)(current.X+current.Y+current.Z)*100;
+
+
+    *delta_X = curr_x - base_x;//calculate frame deltaX
+    *delta_Y = curr_y - base_y;//calculate frame deltaY
+}
+
+
+
+

@@ -35,6 +35,9 @@
 void MX_TOF_Init(void);
 void MX_TOF_Process(void);
 void MX_TOF_ToggleReso(void);
+void MX_TOF_Begin(void);
+void MX_TOF_Stop(void);
+void parse_TOF_result(RANGING_SENSOR_Result_t* result, int matrix[8][8]);
 void print_result(RANGING_SENSOR_Result_t *Result);
 
 

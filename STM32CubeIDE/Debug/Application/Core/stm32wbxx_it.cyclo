@@ -18,3 +18,4 @@ stm32wbxx_it.c:315:6:DMA2_Channel4_IRQHandler	1
 stm32wbxx_it.c:333:6:EXTI4_IRQHandler	1
 stm32wbxx_it.c:344:6:EXTI0_IRQHandler	1
 stm32wbxx_it.c:355:6:EXTI1_IRQHandler	1
+stm32wbxx_it.c:366:6:EXTI2_IRQHandler	1

@@ -86,8 +86,9 @@ static void MX_RF_Init(void);
 static void MX_RTC_Init(void);
 static void MX_IPCC_Init(void);
 static void MX_RNG_Init(void);
-static void MX_I2C1_Init(void);
+//static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
+
 
 /* USER CODE END PFP */
 
@@ -126,7 +127,6 @@ int main(void)
    MX_IPCC_Init();
 
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -154,6 +154,8 @@ int main(void)
     MX_APPE_Process();
 	//HAL_GPIO_TogglePin(GPIOB,0b11111111);
 	//HAL_Delay(100);
+    //uint8_t* msg = "hello world\n";
+    //HAL_UART_Transmit(&huart1, msg, 12, 100);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -278,7 +280,7 @@ void MX_LPUART1_UART_Init(void)
 
   /* USER CODE END LPUART1_Init 1 */
   hlpuart1.Instance = LPUART1;
-  hlpuart1.Init.BaudRate = 115200;
+  hlpuart1.Init.BaudRate = 1000000;//TODO: revert changes
   hlpuart1.Init.WordLength = UART_WORDLENGTH_8B;
   hlpuart1.Init.StopBits = UART_STOPBITS_1;
   hlpuart1.Init.Parity = UART_PARITY_NONE;
@@ -326,7 +328,7 @@ void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
+  huart1.Init.BaudRate = 1000000; //todo:revert
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -509,10 +511,12 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
 
 }
 
 /* USER CODE BEGIN 4 */
+
 
 /* USER CODE END 4 */
 

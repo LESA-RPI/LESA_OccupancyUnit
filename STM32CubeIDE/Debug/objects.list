@@ -1,3 +1,4 @@
+"./Application/Core/Tracking_Algo.o"
 "./Application/Core/app_debug.o"
 "./Application/Core/app_entry.o"
 "./Application/Core/app_tof.o"

@@ -70,6 +70,7 @@ void CFG_HW_LPUART1_DMA_TX_IRQHandler( void );
 void PUSH_BUTTON_SW1_EXTI_IRQHandler(void);
 void PUSH_BUTTON_SW2_EXTI_IRQHandler(void);
 void PUSH_BUTTON_SW3_EXTI_IRQHandler(void);
+void COLOR_INT_EXTI_IRQHandler(void);
 
 void POWEROFF_EXTI_IRQHandler(void);
 void TIM2_IRQHandler(void);

@@ -606,6 +606,8 @@ typedef enum
 #define PUSH_BUTTON_SW1_EXTI_IRQHandler                         EXTI4_IRQHandler
 #define PUSH_BUTTON_SW2_EXTI_IRQHandler                         EXTI0_IRQHandler
 #define PUSH_BUTTON_SW3_EXTI_IRQHandler                         EXTI1_IRQHandler
+
+#define COLOR_INT_EXTI_IRQHandler								EXTI2_IRQHandler //PC2
    
 #define POWEROFF_EXTI_IRQHandler                            EXTI15_10_IRQHandler
 /* USER CODE END Defines */
@@ -631,7 +633,9 @@ typedef enum
   CFG_TASK_MESH_SERIAL_REQ_ID,
   CFG_TASK_APPLI_REQ_ID,
   CFG_TASK_MESH_SW1_REQ_ID,
+  CFG_TASK_MESH_SW2_REQ_ID,
   CFG_TASK_MESH_SW3_REQ_ID,
+  CFG_TASK_MESH_COLOR_REQ_ID,
   CFG_TASK_MESH_LPN_REQ_ID,
   CFG_TASK_HCI_ASYNCH_EVT_ID,
 /* USER CODE BEGIN CFG_Task_Id_With_HCI_Cmd_t */
