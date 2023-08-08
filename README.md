@@ -11,7 +11,7 @@
 
 Based on STM's *BLE_MeshLightingPRFNode* example, this project gets data from the ToF and color sensor. Bluetooth functionality has not been fully developed
 
-### Current Project Overview (STM32 occupancy detection)
+### Current Program Overview (STM32 occupancy detection)
 ```mermaid
 graph TD
 boot(Initilizaiton of STM32 and task registrations) ---> init(Sensor Init) --wait for init to finish--> standby{Standby};
@@ -26,6 +26,23 @@ standby --sw2 short press--> loopyloop1(ToF matrix to UART)
 loopyloop1--sw2 short press--> standby
 end
 ```
+
+### Project Overview 
+```mermaid
+graph LR
+subgraph Room
+unit1[Server];unit2[Server];unit3[Server];unit4[Server];unit5{Client};
+unit1 & unit2 ---- unit3 & unit4
+unit5 ---- unit1
+end
+unit5 ---- building[Building management sys]
+```
+Server and Clients are defined by
+```
+#define ENABLE_SENSOR_MODEL_SERVER                                           (1)
+#define ENABLE_SENSOR_MODEL_CLIENT                                           (0)
+```
+, where server is the one with sensor running, and client is the one requesting or listening
 
 ### Conituous ToF matrix pulling configeration
 ```mermaid
@@ -81,6 +98,8 @@ UTIL_SEQ_SetTask((1 << 4), CFG_SEQ_Prio_0);
 ```
 
 ### Bluetooth setting
+
+This project envisioned using BLE mesh to communicate between units
 
 ## Tracking Algorithm
 
