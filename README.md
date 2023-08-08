@@ -95,11 +95,11 @@ https://wiki.st.com/stm32mcu/wiki/Connectivity:STM32WB_BLE_MESH_Sensor_Model#/me
 
 Summer Team Contact Information:
 
-•	Kaihong (Kai) Lin - link10@rpi.edu 
+•	link10@rpi.edu 
 
-•	Sanghyun (Sean) Kim- kims29@rpi.edu 
+•	kims29@rpi.edu 
 
-•	Jason Zheng- zhengj8@rpi.edu
+•	zhengj8@rpi.edu
 
 
 
