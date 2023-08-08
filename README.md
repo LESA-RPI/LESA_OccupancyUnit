@@ -1,26 +1,16 @@
 # LESA_OccupancyUnit (BLE_MeshLightingPRFNode)
 ## Table of Contents
-[Folder Navigation](#Folder-Navigation)
-
-[Current Program Overview (STM32 occupancy detection)](#Current-Program-Overview-(STM32-occupancy-detection))
-
-[Project Overview](#Project-Overview)
-
-[Conituous ToF matrix pulling configeration](#Conituous-ToF-matrix-pulling-configeration)
-
-[How to use](#How-to-use)
-
-[How it works](#How-it-works)
-
-[How it runs](#How-it-runs)
-
-[Bluetooth setting](#Bluetooth-setting)
-
-[Tracking Algorithm](#Tracking-Algorithm)
-
-[Sensor related files](#Sensor-related-files)
-
-[Summer Team Contact Information](#Summer-Team-Contact-Information)
+- [Folder Navigation](##Folder-Navigation)
+- [Current Program Overview (STM32 occupancy detection)](#Current-Program-Overview-(STM32-occupancy-detection))
+- [Project Overview](#Project-Overview)
+- [Conituous ToF matrix pulling configeration](#Conituous-ToF-matrix-pulling-configeration)
+- [How to use](#How-to-use)
+- [How it works](#How-it-works)
+- [How it runs](#How-it-runs)
+- [Bluetooth setting](#Bluetooth-setting)
+- [Tracking Algorithm](#Tracking-Algorithm)
+- [Sensor related files](#Sensor-related-files)
+- [Summer Team Contact Information](#Summer-Team-Contact-Information)
 
 
 ## Folder Navigation
