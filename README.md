@@ -1,11 +1,14 @@
 # BLE_MeshLightingPRFNode
-C:\STM\workspace\BLE_MeshLightingPRFNode
+
 
 Based on STM's BLE_MeshLightingPRFNode example, this project gets data from the ToF and color sensor. Due to the incompetance of our ability, in order to use our project, you have to do the following: 
 
 
 
 // TODO: Add file structure
+
+Make sure to create the following workspace for STM32cubeIDE:
+C:\STM\workspace\BLE_MeshLightingPRFNode
 
 VL53L8CX(TOF Sensor)
 
