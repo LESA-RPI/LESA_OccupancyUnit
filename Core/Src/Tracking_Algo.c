@@ -377,7 +377,7 @@ void print_fifo(FIFObuffer *fifobuffer) {
 
 // Function to print the matrix on the console
 void print_matrix(int matrix[N][N]) {
-#if (0)
+#if (1)
 	printf("##Matrix##|");
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
