@@ -1,19 +1,31 @@
 # LESA_OccupancyUnit (BLE_MeshLightingPRFNode)
 ## Table of Contents
 [Folder Navigation](#Folder-Navigation)
+
 [Current Program Overview (STM32 occupancy detection)](#Current-Program-Overview-(STM32-occupancy-detection))
+
 [Project Overview](#Project-Overview)
+
 [Conituous ToF matrix pulling configeration](#Conituous-ToF-matrix-pulling-configeration)
+
 [How to use](#How-to-use)
+
 [How it works](#How-it-works)
+
 [How it runs](#How-it-runs)
+
 [Bluetooth setting](#Bluetooth-setting)
+
 [Tracking Algorithm](#Tracking-Algorithm)
+
 [Sensor related files](#Sensor-related-files)
+
 [VL53L8CX (TOF Sensor)](#VL53L8CX-(TOF-Sensor))
+
 [TCS3430 (Tristimulus Sensor)](#TCS3430-(Tristimulus-Sensor))
+
 [Summer Team Contact Information:](#Summer-Team-Contact-Information:)
-<a name="headers"/>
+
 
 ## Folder Navigation
 1. [NON-STM32 Project Folder](https://github.com/IAmiku/LESA_OccupancyUnit/tree/main/NON-STM32%20Project%20Folder)
