@@ -1,10 +1,10 @@
-This programes is not important.
+This program is not important.
 
-It uses two ESP32, one with color sensor attached and one with neopixel. 
+It uses two ESP32, one with color sensor attached and the other with neopixel (rgb LED). 
 
 The color sensor ESP32 would send XYZ values to the other ESP32, which would try to replicate the same color on its neopixel LED.
 
-Connecting either one ESP32 to the computer and runs the python programe after setting up all the com port stuff gives you a spectrometer
+After flashing both ESP32 with their python programs and powering both boards you end up with a spectrometer.
 
 ```mermaid
 graph LR
