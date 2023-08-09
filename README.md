@@ -73,8 +73,12 @@ stm <--I2C--> colorsensor[ColorS]
 stm <--I2C--> tof[ToF]
 end
 ```
-https://github.com/IAmiku/LESA_OccupancyUnit/blob/main/Wiring%20diagram.jpg
 
+## Wiring Diagram
+<p align="center">
+<img src="https://github.com/IAmiku/LESA_OccupancyUnit/blob/main/Wiring%20diagram.jpg" width="900" />
+</p>
+Some of external resistors are necessary as the diagram above shown since the L8 TOF board does not internal resistors on it.
 
 ## How to use
 In order to use this project you must download this entire repository and open the `.project` file in the STM32CubeIDE folder:
