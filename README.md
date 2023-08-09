@@ -32,9 +32,9 @@ Based on STM's *BLE_MeshLightingPRFNode* example, this project gets data from th
 graph TD
 boot(Initilizaiton of STM32 and task registrations) ---> init(Sensor Init) --wait for init to finish--> standby{Standby};
 subgraph Appli_mesh.c & others
-standby --sw1 short press--> reply1(BLE color value advatisement);
+standby --sw1 short press--> reply1(BLE color value advertisement);
 reply1-->standby
-standby --sw1 long press--> reply2(BLE ToF value advatisement);
+standby --sw1 long press--> reply2(BLE ToF value advertisement);
 reply2---> standby
 standby --sw2 long press--> base(background set up)---> standby
 standby -->change{Color INT}-->sensor(wakes up ToF and data pulling)--No blobs present for long period-->standby
