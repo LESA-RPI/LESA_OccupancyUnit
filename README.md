@@ -60,7 +60,7 @@ Server and Clients are defined by
 ```
 , where server is the one with sensor running, and client is the one requesting or listening
 
-### Conituous ToF matrix pulling configeration
+### Conituous ToF matrix pulling configuration
 ```mermaid
 graph TD
 
@@ -73,7 +73,7 @@ stm <--I2C--> colorsensor[ColorS]
 stm <--I2C--> tof[ToF]
 end
 ```
-
+https://github.com/IAmiku/LESA_OccupancyUnit/blob/main/Wiring%20diagram.jpg
 
 
 ## How to use
