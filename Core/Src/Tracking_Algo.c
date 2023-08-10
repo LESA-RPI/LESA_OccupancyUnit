@@ -127,7 +127,7 @@ int find_centers_of_mass(int matrix[N][N], Point *center_of_mass) {
 			center_of_mass[blob_count].y = sum.y / count;
 			blob_count++;
 		}
-		//printf("Blob dectected %d\n\r",blob_count);
+		//printf("Blob dectected %d\n",blob_count);
 
 	}
 
@@ -155,7 +155,7 @@ float find_proportional_average(int matrix[N][N], Point center_of_mass) {
 				sum += (float) matrix[x + dx][y + dy] * weight; // Sum the weighted values
 				weight_sum += weight; // Sum the weights for normalization
 #if (DEBUG&&!PYTHON_VIEWER)
-                printf("cell: %f\t wight:%f\r\n",(float)matrix[x + dx][y + dy],weight);
+                printf("cell: %f\t wight:%f\n",(float)matrix[x + dx][y + dy],weight);
                 #endif
 			}
 		}
@@ -180,8 +180,8 @@ FrameInfo parse_frame(int matrix[N][N], float deltaX, float deltaY) {
 		frame_info.Blobs[i].direction = 0.0f; // Set default direction as 0
 		frame_info.Blobs[i].velocity = 0.0f;  // Set default velocity as 0
 #if (DEBUG && !PYTHON_VIEWER)
-        printf("Blob %d center of mass: (%.2f %.2f)\r\n", i + 1, frame_info.Blobs[i].center_of_mass.x, frame_info.Blobs[i].center_of_mass.y);
-        printf("Proportional average for blob %d: %.2f\r\n", i + 1, frame_info.Blobs[i].proportional_average);
+        printf("Blob %d center of mass: (%.2f %.2f)\n", i + 1, frame_info.Blobs[i].center_of_mass.x, frame_info.Blobs[i].center_of_mass.y);
+        printf("Proportional average for blob %d: %.2f\n", i + 1, frame_info.Blobs[i].proportional_average);
 #endif
 	}
 
@@ -355,7 +355,7 @@ void enqueue(FIFObuffer *fifo, FrameInfo frame_info) {
 	calculate_blob_velocity_and_direction(fifo);
 
 #if (!PYTHON_VIEWER&&DEBUG)
-    printf("Enqueued FrameInfo at address: %p\r\n",
+    printf("Enqueued FrameInfo at address: %p\n",
             (void*) &(fifo->buffer[fifo->rear]));
 #endif
 }
@@ -363,13 +363,13 @@ void enqueue(FIFObuffer *fifo, FrameInfo frame_info) {
 // Function to print the contents of the FIFObuffer
 void print_fifo(FIFObuffer *fifobuffer) {
 	if (is_empty(fifobuffer)) {
-		printf("FIFObuffer is empty.\r\n");
+		printf("FIFObuffer is empty.\n");
 		return;
 	}
 
 	int index = fifobuffer->front;
 	for (int i = 1; i <= fifobuffer->count; i++) {
-		printf("Frame %d:\r\n", i);
+		printf("Frame %d:\n", i);
 		print_frame_info(fifobuffer->buffer[index]);
 		index = (index + 1) % FIFO_SIZE;
 	}
@@ -384,11 +384,11 @@ void print_matrix(int matrix[N][N]) {
             printf("%d|", matrix[i][j]);
         }
     }
-    printf("\r\n");
+    printf("\n");
 
 #else
 #if (1)
-	printf("Matrix:\r\n");
+	printf("Matrix:\n");
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
 			if (matrix[i][j] >= THRESHOLD) {
@@ -397,10 +397,10 @@ void print_matrix(int matrix[N][N]) {
 				printf("\033[38;5;9m%4d\033[0m|", matrix[i][j]);
 			}
 		}
-		printf("\r\n");
+		printf("\n");
 	}
 #else
-    printf("Matrix:\r\n");
+    printf("Matrix:\n");
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             if(matrix[i][j]>=THRESHOLD){
@@ -410,7 +410,7 @@ void print_matrix(int matrix[N][N]) {
                 printf("□");
             }
         }
-        printf("\r\n");
+        printf("\n");
     }
 
 #endif
@@ -418,8 +418,8 @@ void print_matrix(int matrix[N][N]) {
 }
 // Function to print the information of a single frame, including Blob's ID
 void print_frame_info(FrameInfo frame_info) {
-	printf("Number of Blobs: %d\r\n", frame_info.num_blobs);
-	printf("     dx: %.2f\tdy: %.2f\r\n", frame_info.delta_X, frame_info.delta_Y);
+	printf("Number of Blobs: %d\n", frame_info.num_blobs);
+	printf("     dx: %.2f\tdy: %.2f\n", frame_info.delta_X, frame_info.delta_Y);
 
 	for (int i = 0; i < frame_info.num_blobs; i++) {
 		Point center_of_mass = frame_info.Blobs[i].center_of_mass;
@@ -428,18 +428,18 @@ void print_frame_info(FrameInfo frame_info) {
 		float velocity = frame_info.Blobs[i].velocity;
 		float direction = frame_info.Blobs[i].direction;
 
-		printf("     Blob %d - ID: %d\r\n", i + 1, blob_id); // Print the Blob's ID
-		printf("             - Center of Mass: %.2f, %.2f\r\n", center_of_mass.x,
+		printf("     Blob %d - ID: %d\n", i + 1, blob_id); // Print the Blob's ID
+		printf("             - Center of Mass: %.2f, %.2f\n", center_of_mass.x,
 				center_of_mass.y);
-		printf("             - Proportional Average: %.2f\r\n",
+		printf("             - Proportional Average: %.2f\n",
 				proportional_average);
-		printf("             - Velocity: %.2f, Direction: %.2f\r\n", velocity,
+		printf("             - Velocity: %.2f, Direction: %.2f\n", velocity,
 				direction);
 	}
 }
 
 void print_frame_info_simple(FrameInfo frame_info) {
-	printf("##FRAME##|%d|%.2f|%.2f|\r\n", frame_info.num_blobs,
+	printf("##FRAME##|%d|%.2f|%.2f|\n", frame_info.num_blobs,
 			frame_info.delta_X, frame_info.delta_Y);
 
 	for (int i = 0; i < frame_info.num_blobs; i++) {
@@ -448,7 +448,7 @@ void print_frame_info_simple(FrameInfo frame_info) {
 		int blob_id = frame_info.Blobs[i].ID; // Add this line to get the Blob's ID
 		float velocity = frame_info.Blobs[i].velocity;
 		float direction = frame_info.Blobs[i].direction;
-		printf("##BLOBS##|%d|%.2f|%.2f|%.2f|%.2f|%.2f|\r\n", blob_id,
+		printf("##BLOBS##|%d|%.2f|%.2f|%.2f|%.2f|%.2f|\n", blob_id,
 				center_of_mass.x, center_of_mass.y, proportional_average,
 				velocity, direction);
 	}
@@ -504,10 +504,10 @@ void generate_random_matrix(uint16_t matrix[N][N]) {
 			head_y = (rand() % (N - 2)) + 1;
 		} while (!is_position_free(matrix, head_x, head_y));
 
-		printf("head: %d, %d \r\n", head_x, head_y);
+		printf("head: %d, %d \n", head_x, head_y);
 
 		uint16_t height = (rand() % (3000 - 1500 + 1)) + 1500; // Random height between 1500 to 3000
-		printf("height: %d\r\n", height);
+		printf("height: %d\n", height);
 
 		// Draw head
 		for (int i = 0; i < N; i++) {

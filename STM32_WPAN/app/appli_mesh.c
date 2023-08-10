@@ -330,7 +330,7 @@ static void Appli_LongButton2Press(void) {
 	CUSTOM_RANGING_SENSOR_GetDistance(CUSTOM_VL53L8CX, &rawBaseFrame);
 	rawBaseColor = get_raw_XYZ(&sensor);
 
-	printf("base value being set\n\r");
+	printf("base value being set\n");
 
 	MX_TOF_Stop();
 	BaseFrameValid = 1;
@@ -389,7 +389,7 @@ static void beginTracking(){
 	 *
 	 */
 	//task 1
-	printf("begin Tracking triggered\n\r");
+	printf("begin Tracking triggered\n");
 	BSP_LED_On(LED_GREEN);
 
 	if (BaseFrameValid==0){
@@ -413,16 +413,16 @@ static void beginTracking(){
 	FIFObuffer fifobuffer;
 	init_fifo(&fifobuffer); // Initialize the FIFObuffer
 
-	printf("\033[2J\033[H");
+	//printf("\033[2J\033[H");
 	uint8_t loopblob = 40;
 	while (loopblob!=0) {
 		//reads new frame
 #if (1)
-		printf("\033[H");
+		//printf("\033[H");
 		//printf("\033[2J\033[H");
 #endif
-		printf("%d loop til sleep\n\r",--loopblob);
-		printf("NEWFRAME\n\r");
+		printf("%d loop til sleep\n",--loopblob);
+		printf("NEWFRAME\n");
 		int32_t status = CUSTOM_RANGING_SENSOR_GetDistance(CUSTOM_VL53L8CX,
 				&rawFrame);
 		while (status != 0) {
@@ -454,10 +454,10 @@ static void beginTracking(){
         //print_frame_info(fifobuffer.buffer[fifobuffer.rear]);
 
         print_frame_info_simple(fifobuffer.buffer[fifobuffer.rear]);
-        printf("NEWFRAMEEND\n\r");
+        printf("NEWFRAMEEND\n");
 
 
-        //printf( "About to print FIFO\n\r");
+        //printf( "About to print FIFO\n");
         //print_fifo(&fifobuffer);
 
 
@@ -465,7 +465,7 @@ static void beginTracking(){
         printf( "\n\r************************************************************"
                 "\n\r************************************************************\033[H\033[H\033[H");//*/
 
-        printf("\033[H");
+        //printf("\033[H");
 	}
 
 	//task 4
@@ -699,7 +699,7 @@ void Appli_BleUnprovisionedIdentifyCb(MOBLEUINT8 data) {
 #ifdef ENABLE_AUTH_TYPE_OUTPUT_OOB
   PrvngInProcess = 1;  
 #endif   
-	TRACE_M(TF_PROVISION, "Unprovisioned Node Identifier received: %02x\n\r",
+	TRACE_M(TF_PROVISION, "Unprovisioned Node Identifier received: %02x\n",
 			data);
 }
 
@@ -752,7 +752,7 @@ void Appli_BleOutputOOBAuthCb(MOBLEUINT8 *output_oob, MOBLEUINT8 size) {
         ooBData |= (output_oob[i] << 8*i);
     }
     OutputOobData = ooBData;
-    TRACE_M(TF_PROVISION,"Output OOB information for provisioner: %ld\n\r", ooBData);
+    TRACE_M(TF_PROVISION,"Output OOB information for provisioner: %ld\n", ooBData);
   #endif
 }
 
@@ -789,7 +789,7 @@ void Appli_OobAuthenticationProcess(void)
 MOBLEUINT8* Appli_BleInputOOBAuthCb(MOBLEUINT8 size) {
 #if defined (ENABLE_AUTH_TYPE_INPUT_OOB) && (ENABLE_SERIAL_INTERFACE)
   MOBLEUINT16 inputTimer = 0; 
-  TRACE_M(TF_PROVISION,"Input OOB information for provisioner-Size: %d\n\r", size);   
+  TRACE_M(TF_PROVISION,"Input OOB information for provisioner-Size: %d\n", size);
   while(1)
   {
       Serial_InterfaceProcess();
@@ -1057,7 +1057,7 @@ SleepModes App_SleepMode_Check(SleepModes sleepMode)
 void BLEMesh_UnprovisionCallback(MOBLEUINT8 reason) {
 	ProvisionFlag = 0;
 
-	TRACE_I(TF_PROVISION, "Device is unprovisioned by provisioner \n\r");
+	TRACE_I(TF_PROVISION, "Device is unprovisioned by provisioner \n");
 #if PB_ADV_SUPPORTED
 	BLEMesh_SetUnprovisionedDevBeaconInterval(PBADV_UNPROV_DEV_BEACON_INTERVAL);
 #endif
@@ -1122,7 +1122,7 @@ MOBLE_RESULT BLEMesh_ProvisionDevice(neighbor_params_t *unprovDeviceArray,
  */
 void BLEMesh_PbAdvLinkOpenCb(void) {
 	ProvisionFlag = 0;
-	TRACE_M(TF_PROVISION, "PB-ADV Link opened successfully \n\r");
+	TRACE_M(TF_PROVISION, "PB-ADV Link opened successfully \n");
 	/* Turn ON Red LED*/
 #if LOW_POWER_FEATURE
   /* do nothing */
@@ -1137,7 +1137,7 @@ void BLEMesh_PbAdvLinkOpenCb(void) {
  * @retval none
  */
 void BLEMesh_PbAdvLinkCloseCb(void) {
-	TRACE_M(TF_PROVISION, "PB-ADV Link Closed successfully \n\r");
+	TRACE_M(TF_PROVISION, "PB-ADV Link Closed successfully \n");
 	/* Turn Off Red LED*/
 #if LOW_POWER_FEATURE
   /* do nothing */
@@ -1293,17 +1293,17 @@ void BLEMesh_NeighborAppearedCallback(const MOBLEUINT8 *bdAddr,
 	}
 
 	if (provisioned == MOBLE_TRUE) {
-		TRACE_M(TF_NEIGHBOUR,"-> Provisioned node. \n\r");
+		TRACE_M(TF_NEIGHBOUR,"-> Provisioned node. \n");
 	} else {
-		TRACE_M(TF_NEIGHBOUR,"-> Unprovisioned device. \n\r");
+		TRACE_M(TF_NEIGHBOUR,"-> Unprovisioned device. \n");
 	}
 
 	TRACE_M(TF_NEIGHBOUR,"rssi: %d. ", rssi);
 
 	if (networkAddress != MOBLE_ADDRESS_UNASSIGNED) {
-		TRACE_M(TF_NEIGHBOUR,"Network address: 0x%.4x\n\r", networkAddress);
+		TRACE_M(TF_NEIGHBOUR,"Network address: 0x%.4x\n", networkAddress);
 	} else {
-		TRACE_M(TF_NEIGHBOUR,"Network address not available\n\r");
+		TRACE_M(TF_NEIGHBOUR,"Network address not available\n");
 	}
 
 	for (MOBLEUINT8 i = 0; i < 16; i++) {
@@ -1320,7 +1320,7 @@ void BLEMesh_NeighborAppearedCallback(const MOBLEUINT8 *bdAddr,
 		}
 	}
 
-	TRACE_M(TF_NEIGHBOUR,"\n\r");
+	TRACE_M(TF_NEIGHBOUR,"\n");
 }
 
 /** 
@@ -1343,17 +1343,17 @@ void BLEMesh_NeighborRefreshedCallback(const MOBLEUINT8 *bdAddr,
 	}
 
 	if (provisioned == MOBLE_TRUE) {
-		TRACE_M(TF_NEIGHBOUR,"-> Provisioned node. \n\r");
+		TRACE_M(TF_NEIGHBOUR,"-> Provisioned node. \n");
 	} else {
-		TRACE_M(TF_NEIGHBOUR,"-> Unprovisioned device. \n\r");
+		TRACE_M(TF_NEIGHBOUR,"-> Unprovisioned device. \n");
 	}
 
 	TRACE_M(TF_NEIGHBOUR,"rssi: %d. ", rssi);
 
 	if (networkAddress != MOBLE_ADDRESS_UNASSIGNED) {
-		TRACE_M(TF_NEIGHBOUR,"Network address: 0x%.4x\n\r", networkAddress);
+		TRACE_M(TF_NEIGHBOUR,"Network address: 0x%.4x\n", networkAddress);
 	} else {
-		TRACE_M(TF_NEIGHBOUR,"Network address not available\n\r");
+		TRACE_M(TF_NEIGHBOUR,"Network address not available\n");
 	}
 
 	for (MOBLEUINT8 i = 0; i < 16; i++) {
@@ -1370,7 +1370,7 @@ void BLEMesh_NeighborRefreshedCallback(const MOBLEUINT8 *bdAddr,
 		}
 	}
 
-	TRACE_M(TF_NEIGHBOUR,"\n\r");
+	TRACE_M(TF_NEIGHBOUR,"\n");
 }
 
 /** 
@@ -1623,9 +1623,9 @@ static void LoopApp(void)	//TODO: finish up
 		BSP_LED_Toggle(LED_BLUE);
 	}
 	Counter++;
-	//printf("\n\r");
+	//printf("\n");
 	//TRACE_M(TF_SENSOR,"%d:",Counter++);
-	//printf("ID are %d\n\r",*pPropertyId);
+	//printf("ID are %d\n",*pPropertyId);
 	Appli_Sensor_ReadValue_UART();
 
 	//tof
