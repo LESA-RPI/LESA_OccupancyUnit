@@ -317,7 +317,7 @@ void softReset(uint8_t *reginfo)
   set_cfg1(reginfo, 0, 64);
 
   //setHighGAIN(false);
-  set_cfg2(reginfo, 0);
+  set_cfg2(reginfo, 1);
 
   //setIntReadClear(false);
   //setSleepAfterInterrupt(false);
@@ -547,10 +547,10 @@ int32_t reset_Status(uint8_t *reginfo)
 void colordiff (tcs3430_optics_val base, tcs3430_optics_val current, float * delta_X, float * delta_Y){
     //calculate cie color
     float base_x,base_y,curr_x,curr_y;
-    base_x = (float)base.X/(float)(base.X+base.Y+base.Z)*100;
-    base_y = (float)base.Y/(float)(base.X+base.Y+base.Z)*100;
-    curr_x = (float)current.X/(float)(current.X+current.Y+current.Z)*100;
-    curr_y = (float)current.Y/(float)(current.X+current.Y+current.Z)*100;
+    base_x = (float)base.X/(float)(base.X+base.Y+base.Z)*10;
+    base_y = (float)base.Y/(float)(base.X+base.Y+base.Z)*10;
+    curr_x = (float)current.X/(float)(current.X+current.Y+current.Z)*10;
+    curr_y = (float)current.Y/(float)(current.X+current.Y+current.Z)*10;
 
 
     *delta_X = curr_x - base_x;//calculate frame deltaX

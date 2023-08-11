@@ -473,6 +473,7 @@ static void beginTracking(){
 	reset_Status(sensor.reginfo);
 	MX_TOF_Stop();
 	BSP_LED_Off(LED_GREEN);
+	rawBaseColor = get_raw_XYZ(&sensor);
 	set_ALSInterrupt(sensor.reginfo, 1, 0);
 }
 

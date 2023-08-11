@@ -180,8 +180,8 @@ FrameInfo parse_frame(int matrix[N][N], float deltaX, float deltaY) {
 		frame_info.Blobs[i].direction = 0.0f; // Set default direction as 0
 		frame_info.Blobs[i].velocity = 0.0f;  // Set default velocity as 0
 #if (DEBUG && !PYTHON_VIEWER)
-        printf("Blob %d center of mass: (%.2f %.2f)\n", i + 1, frame_info.Blobs[i].center_of_mass.x, frame_info.Blobs[i].center_of_mass.y);
-        printf("Proportional average for blob %d: %.2f\n", i + 1, frame_info.Blobs[i].proportional_average);
+        printf("Blob %d center of mass: (%.5f %.5f)\n", i + 1, frame_info.Blobs[i].center_of_mass.x, frame_info.Blobs[i].center_of_mass.y);
+        printf("Proportional average for blob %d: %.5f\n", i + 1, frame_info.Blobs[i].proportional_average);
 #endif
 	}
 
@@ -419,7 +419,7 @@ void print_matrix(int matrix[N][N]) {
 // Function to print the information of a single frame, including Blob's ID
 void print_frame_info(FrameInfo frame_info) {
 	printf("Number of Blobs: %d\n", frame_info.num_blobs);
-	printf("     dx: %.2f\tdy: %.2f\n", frame_info.delta_X, frame_info.delta_Y);
+	printf("     dx: %.5f\tdy: %.5f\n", frame_info.delta_X, frame_info.delta_Y);
 
 	for (int i = 0; i < frame_info.num_blobs; i++) {
 		Point center_of_mass = frame_info.Blobs[i].center_of_mass;
@@ -429,17 +429,17 @@ void print_frame_info(FrameInfo frame_info) {
 		float direction = frame_info.Blobs[i].direction;
 
 		printf("     Blob %d - ID: %d\n", i + 1, blob_id); // Print the Blob's ID
-		printf("             - Center of Mass: %.2f, %.2f\n", center_of_mass.x,
+		printf("             - Center of Mass: %.5f, %.5f\n", center_of_mass.x,
 				center_of_mass.y);
-		printf("             - Proportional Average: %.2f\n",
+		printf("             - Proportional Average: %.5f\n",
 				proportional_average);
-		printf("             - Velocity: %.2f, Direction: %.2f\n", velocity,
+		printf("             - Velocity: %.5f, Direction: %.5f\n", velocity,
 				direction);
 	}
 }
 
 void print_frame_info_simple(FrameInfo frame_info) {
-	printf("##FRAME##|%d|%.2f|%.2f|\n", frame_info.num_blobs,
+	printf("##FRAME##|%d|%.5f|%.5f|\n", frame_info.num_blobs,
 			frame_info.delta_X, frame_info.delta_Y);
 
 	for (int i = 0; i < frame_info.num_blobs; i++) {
@@ -448,7 +448,7 @@ void print_frame_info_simple(FrameInfo frame_info) {
 		int blob_id = frame_info.Blobs[i].ID; // Add this line to get the Blob's ID
 		float velocity = frame_info.Blobs[i].velocity;
 		float direction = frame_info.Blobs[i].direction;
-		printf("##BLOBS##|%d|%.2f|%.2f|%.2f|%.2f|%.2f|\n", blob_id,
+		printf("##BLOBS##|%d|%.5f|%.5f|%.5f|%.5f|%.5f|\n", blob_id,
 				center_of_mass.x, center_of_mass.y, proportional_average,
 				velocity, direction);
 	}

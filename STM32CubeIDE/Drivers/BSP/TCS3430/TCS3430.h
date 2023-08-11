@@ -9,7 +9,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#define Range            2
+#define Range            1
 #define TCS3430_ADDR  	(0x39 << 1)
 
 #define ENABLE_ADDR     (0x80)	// R/W    0
