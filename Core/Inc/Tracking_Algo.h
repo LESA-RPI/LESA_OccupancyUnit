@@ -2,7 +2,7 @@
 #define TRACKING_ALGO_H
 
 #define N 8
-#define MIN_BLOB_SIZE 5
+#define MIN_BLOB_SIZE 3
 #define BIG_BLOB_BASELINE_THRESHOLD 20
 #define MAX_BLOBS (N * N / MIN_BLOB_SIZE)
 #define THRESHOLD 500
@@ -10,7 +10,7 @@
 #define FIFO_SIZE 40
 #define PYTHON_VIEWER 1
 #define STM_USER
-#define VARIATION 100
+#define VARIATION 50
 #define MAX_FRAMES_TO_LOOK_BACK 3
 
 
