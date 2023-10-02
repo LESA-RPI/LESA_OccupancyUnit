@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "TPS78318DDCR")(type "KiCad")(uri "C:/Users/omanavekar/Downloads/TPS78318DDCR/TPS78318DDCR.kicad_sym")(options "")(descr ""))
+  (lib (name "TCS3430")(type "KiCad")(uri "${KIPRJMOD}/TCS3430.kicad_sym")(options "")(descr ""))
+)
