@@ -1,4 +1,4 @@
-22212239397228652
+22217332596762473
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -64813,6 +64813,20 @@ net tie
 4
 4
 Occupancy_Sensor_Custom_Footprints
+NX2012_32K768
+
+
+0
+2
+2
+Occupancy_Sensor_Custom_Footprints
+NX2016SA_32M
+
+
+0
+4
+4
+Occupancy_Sensor_Custom_Footprints
 TCS3430
 
 
@@ -64826,6 +64840,13 @@ TPS7A03xxxPDQN
 0
 0
 0
+Occupancy_Sensor_Custom_Footprints
+TYPEC-304S-ACP16
+
+
+0
+20
+17
 Occupancy_Sensor_Custom_Footprints
 VL53L8CX
 
