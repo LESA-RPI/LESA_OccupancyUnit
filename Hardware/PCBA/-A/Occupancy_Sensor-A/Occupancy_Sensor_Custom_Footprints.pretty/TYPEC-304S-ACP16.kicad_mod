@@ -9,7 +9,7 @@
       (effects (font (size 1 1) (thickness 0.15)))
     (tstamp e8a7035f-b85a-4e78-a400-638a431b7b03)
   )
-  (fp_text user "PCB EDGE" (at -3.6576 4.1656 unlocked) (layer "Dwgs.User")
+  (fp_text user "EDGE" (at -1.975 4.15 unlocked) (layer "Dwgs.User")
       (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
     (tstamp 78588517-9834-45ee-b05d-1eba1fb69b72)
   )

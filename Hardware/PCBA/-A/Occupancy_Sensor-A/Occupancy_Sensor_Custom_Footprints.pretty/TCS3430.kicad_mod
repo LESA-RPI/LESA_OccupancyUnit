@@ -36,4 +36,9 @@
     (thermal_bridge_angle 45) (tstamp 3c63e991-1abe-4fd9-9ed4-057bfd7be95f))
   (pad "8" smd rect (at 0.55 -0.96) (size 0.5 0.35) (layers "F.Cu" "F.Paste" "F.Mask")
     (thermal_bridge_angle 45) (tstamp d3ebcdef-9d4d-4f17-95da-ae417136f87c))
+  (model "C:/Users/omanavekar/Desktop/LESA/Occupancy_Sensor/LESA_OccupancyUnit/Hardware/ExclusionZoneModels/TCS3430_exclusion_r1.STEP"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 90))
+  )
 )
