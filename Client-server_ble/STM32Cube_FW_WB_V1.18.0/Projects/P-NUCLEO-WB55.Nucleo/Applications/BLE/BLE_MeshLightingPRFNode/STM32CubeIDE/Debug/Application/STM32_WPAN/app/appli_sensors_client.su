@@ -1,0 +1,8 @@
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_sensors_client.c:57:14:Appli_SensorsClient_API	24	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_sensors_client.c:150:6:Appli_Sensor_Cadence_Status	32	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_sensors_client.c:175:6:Appli_Sensor_Settings_Status	32	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_sensors_client.c:200:6:Appli_Sensor_Setting_Status	32	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_sensors_client.c:225:6:Appli_Sensor_Descriptor_Status	32	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_sensors_client.c:250:6:Appli_Sensor_Status	32	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_sensors_client.c:280:6:Appli_Sensor_Column_Status	32	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_sensors_client.c:305:6:Appli_Sensor_Series_Status	32	static

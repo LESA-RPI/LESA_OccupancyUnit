@@ -1,0 +1,13 @@
+../../../../../../../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_system.h:2223:26:LL_FLASH_GetUDN	1
+../../../../../../../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_system.h:2235:26:LL_FLASH_GetDeviceID	1
+../../../../../../../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_system.h:2247:26:LL_FLASH_GetSTCompanyID	1
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/app_ble.c:110:6:APP_BLE_Init	3
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/app_ble.c:224:28:SVCCTL_App_Notification	1
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/app_ble.c:241:13:Ble_Tl_Init	1
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/app_ble.c:252:16:BleGetBdAddress	3
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/app_ble.c:317:6:hci_notify_asynch_evt	1
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/app_ble.c:328:6:hci_cmd_resp_release	1
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/app_ble.c:338:6:hci_cmd_resp_wait	1
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/app_ble.c:349:13:BLE_UserEvtRx	2
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/app_ble.c:369:13:BLE_StatusNot	3
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/app_ble.c:408:6:SVCCTL_ResumeUserEventFlow	1

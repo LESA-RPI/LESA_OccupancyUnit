@@ -1,0 +1,10 @@
+../../../../../../../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_system.h:2162:26:LL_FLASH_IsActiveFlag_OperationSuspended	4	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_nvm.c:141:14:AppliNvm_FlashProgram	32	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_nvm.c:183:14:AppliNvm_MarkSubpageInvalid	16	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_nvm.c:238:14:AppliNvm_FactorySettingReset	16	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_nvm.c:353:14:AppliNvm_SaveModelState	24	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_nvm.c:387:14:AppliNvm_ClearModelState	16	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_nvm.c:449:14:AppliNvm_LoadModelState	16	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_nvm.c:498:6:AppliNvm_Process	544	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_nvm.c:609:6:AppliNvm_SaveMessageParam	4	static
+E:/Desktop/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_MeshLightingPRFNode/STM32_WPAN/app/appli_nvm.c:623:14:AppliNvm_FindFirstEmptyPage	48	static

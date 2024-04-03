@@ -1,0 +1,7 @@
+ble_p2pserver\exe\vl53l8cx_api.o: ..\Drivers\vl53l8cx\modules\vl53l8cx_api.c
+ble_p2pserver\exe\vl53l8cx_api.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+ble_p2pserver\exe\vl53l8cx_api.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+ble_p2pserver\exe\vl53l8cx_api.o: ..\Drivers\vl53l8cx\modules\vl53l8cx_api.h
+ble_p2pserver\exe\vl53l8cx_api.o: ..\Drivers\vl53l8cx\porting\platform.h
+ble_p2pserver\exe\vl53l8cx_api.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+ble_p2pserver\exe\vl53l8cx_api.o: ..\Drivers\vl53l8cx\modules\vl53l8cx_buffers.h
