@@ -264,7 +264,7 @@ static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
 
 //	  if(Buf[0] == '1')
 //	  {
-//		  HAL_GPIO_Toggle(GPIOB, GPIO_PIN_5, 1);
+//		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 1);
 //		  char buf[] = "Received";
 //		  uint16_t len = sizeof(buf) - 1;
 //

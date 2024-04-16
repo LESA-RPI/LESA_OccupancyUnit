@@ -59,6 +59,18 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define LDO_ENABLE_Pin GPIO_PIN_3
 #define LDO_ENABLE_GPIO_Port GPIOA
+#define LPn_Pin GPIO_PIN_5
+#define LPn_GPIO_Port GPIOA
+#define INT_TOF_Pin GPIO_PIN_6
+#define INT_TOF_GPIO_Port GPIOA
+#define INT_TOF_EXTI_IRQn EXTI9_5_IRQn
+#define SYNC_TOF_Pin GPIO_PIN_7
+#define SYNC_TOF_GPIO_Port GPIOA
+#define I2C_RST_TOF_Pin GPIO_PIN_8
+#define I2C_RST_TOF_GPIO_Port GPIOA
+#define INT_CLR_Pin GPIO_PIN_15
+#define INT_CLR_GPIO_Port GPIOA
+#define INT_CLR_EXTI_IRQn EXTI15_10_IRQn
 #define LED_Pin GPIO_PIN_5
 #define LED_GPIO_Port GPIOB
 
