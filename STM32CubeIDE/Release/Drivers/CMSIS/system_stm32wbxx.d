@@ -1,5 +1,5 @@
 Drivers/CMSIS/system_stm32wbxx.o: \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Core/Src/system_stm32wbxx.c \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Core/Src/system_stm32wbxx.c \
  ../../Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wbxx.h \
  ../../Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h \
  ../../Drivers/CMSIS/Include/core_cm4.h \

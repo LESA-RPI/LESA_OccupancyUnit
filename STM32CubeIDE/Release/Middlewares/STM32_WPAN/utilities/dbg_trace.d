@@ -1,6 +1,6 @@
 Middlewares/STM32_WPAN/utilities/dbg_trace.o: \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/utilities_common.h \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/utilities/utilities_common.h \
  ../../Core/Inc/app_conf.h \
  ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/hw.h \
  ../../Core/Inc/hw_conf.h ../../Core/Inc/hw_if.h \
@@ -72,9 +72,9 @@ Middlewares/STM32_WPAN/utilities/dbg_trace.o: \
  ../../Middlewares/ST/STM32_WPAN/ble/core/ble_bufsize.h \
  ../../Core/Inc/main.h ../../Core/Inc/app_conf.h \
  ../../Core/Inc/app_entry.h ../../Core/Inc/app_common.h \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/stm_queue.h \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.h
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/utilities_common.h:
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/utilities/stm_queue.h \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.h
+D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/utilities/utilities_common.h:
 ../../Core/Inc/app_conf.h:
 ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/hw.h:
 ../../Core/Inc/hw_conf.h:
@@ -149,5 +149,5 @@ C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/uti
 ../../Core/Inc/app_conf.h:
 ../../Core/Inc/app_entry.h:
 ../../Core/Inc/app_common.h:
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/stm_queue.h:
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.h:
+D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/utilities/stm_queue.h:
+D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.h:

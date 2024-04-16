@@ -1,6 +1,6 @@
 Middlewares/STM32_WPAN/ble/blesvc/mesh.o: \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/svc/Src/mesh.c \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/svc/Src/common_blesvc.h \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/ble/svc/Src/mesh.c \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/ble/svc/Src/common_blesvc.h \
  ../../Middlewares/ST/STM32_WPAN/ble/ble_common.h \
  ../../STM32_WPAN/app/ble_conf.h ../../Core/Inc/app_conf.h \
  ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/hw.h \
@@ -137,7 +137,7 @@ Middlewares/STM32_WPAN/ble/blesvc/mesh.o: \
  ../../STM32_WPAN/app/appli_nvm.h \
  ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/shci/shci.h \
  ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/mbox_def.h
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/svc/Src/common_blesvc.h:
+D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/ble/svc/Src/common_blesvc.h:
 ../../Middlewares/ST/STM32_WPAN/ble/ble_common.h:
 ../../STM32_WPAN/app/ble_conf.h:
 ../../Core/Inc/app_conf.h:

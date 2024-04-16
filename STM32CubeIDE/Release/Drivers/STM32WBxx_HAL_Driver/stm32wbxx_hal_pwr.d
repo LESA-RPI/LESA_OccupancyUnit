@@ -1,5 +1,5 @@
 Drivers/STM32WBxx_HAL_Driver/stm32wbxx_hal_pwr.o: \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_pwr.c \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_pwr.c \
  ../../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h \
  ../../Core/Inc/stm32wbxx_hal_conf.h \
  ../../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_dma.h \

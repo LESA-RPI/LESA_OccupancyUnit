@@ -1,4 +1,4 @@
-"./Application/Core/TMD3725.o"
+"./Application/Core/Tracking_Algo.o"
 "./Application/Core/app_debug.o"
 "./Application/Core/app_entry.o"
 "./Application/Core/app_tof.o"
@@ -32,6 +32,7 @@
 "./Application/STM32_WPAN/target/hw_ipcc.o"
 "./Application/Startup/startup_stm32wb55rgvx.o"
 "./Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.o"
+"./Drivers/BSP/TCS3430/TCS3430.o"
 "./Drivers/BSP/tmd3725/tmd3725.o"
 "./Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.o"
 "./Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.o"

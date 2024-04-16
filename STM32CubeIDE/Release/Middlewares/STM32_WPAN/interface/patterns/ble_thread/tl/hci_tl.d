@@ -1,5 +1,5 @@
 Middlewares/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.o: \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c \
  ../../Middlewares/ST/STM32_WPAN/ble/ble_common.h \
  ../../STM32_WPAN/app/ble_conf.h ../../Core/Inc/app_conf.h \
  ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/hw.h \
@@ -82,8 +82,8 @@ Middlewares/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.o: \
  ../../Middlewares/ST/STM32_WPAN/ble/core/template/osal.h \
  ../../Middlewares/ST/STM32_WPAN/ble/core/template/compiler.h \
  ../../Middlewares/ST/STM32_WPAN/utilities/stm_list.h \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/tl.h \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.h
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/tl.h \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.h
 ../../Middlewares/ST/STM32_WPAN/ble/ble_common.h:
 ../../STM32_WPAN/app/ble_conf.h:
 ../../Core/Inc/app_conf.h:
@@ -170,5 +170,5 @@ Middlewares/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.o: \
 ../../Middlewares/ST/STM32_WPAN/ble/core/template/osal.h:
 ../../Middlewares/ST/STM32_WPAN/ble/core/template/compiler.h:
 ../../Middlewares/ST/STM32_WPAN/utilities/stm_list.h:
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/tl.h:
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.h:
+D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/tl.h:
+D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.h:

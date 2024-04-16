@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (10.3-2021.10)
+# Toolchain: GNU Tools for STM32 (11.3.rel1)
 ################################################################################
 
 ELF_SRCS := 
@@ -28,6 +28,7 @@ Application/STM32_WPAN/app \
 Application/STM32_WPAN/target \
 Application/Startup \
 Drivers/BSP/P-NUCLEO-WB55.Nucleo \
+Drivers/BSP/TCS3430 \
 Drivers/BSP/tmd3725 \
 Drivers/BSP/vl53l8cx/modules \
 Drivers/BSP/vl53l8cx/porting \

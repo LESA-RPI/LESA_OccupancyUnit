@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (10.3-2021.10)
+# Toolchain: GNU Tools for STM32 (11.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -20,6 +20,7 @@ RM := rm -rf
 -include Drivers/BSP/vl53l8cx/modules/subdir.mk
 -include Drivers/BSP/vl53l8cx/subdir.mk
 -include Drivers/BSP/tmd3725/subdir.mk
+-include Drivers/BSP/TCS3430/subdir.mk
 -include Drivers/BSP/P-NUCLEO-WB55.Nucleo/subdir.mk
 -include Application/Startup/subdir.mk
 -include Application/STM32_WPAN/target/subdir.mk
@@ -76,8 +77,8 @@ all: main-build
 main-build: BLE_MeshLightingPRFNode.elf secondary-outputs
 
 # Tool invocations
-BLE_MeshLightingPRFNode.elf BLE_MeshLightingPRFNode.map: $(OBJS) $(USER_OBJS) C:\STM\workspace\BLE_MeshLightingPRFNode\STM32CubeIDE\STM32WB55RGVX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "BLE_MeshLightingPRFNode.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\STM\workspace\BLE_MeshLightingPRFNode\STM32CubeIDE\STM32WB55RGVX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLE_MeshLightingPRFNode.map" -Wl,--gc-sections -static -L../../Middlewares/ST/STM32_WPAN/ble/mesh/Library --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+BLE_MeshLightingPRFNode.elf BLE_MeshLightingPRFNode.map: $(OBJS) $(USER_OBJS) D:\Research\ Projects\Occupancy\LESA_OccupancyUnit\STM32CubeIDE\STM32WB55RGVX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "BLE_MeshLightingPRFNode.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Research Projects\Occupancy\LESA_OccupancyUnit\STM32CubeIDE\STM32WB55RGVX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLE_MeshLightingPRFNode.map" -Wl,--gc-sections -static -L../../Middlewares/ST/STM32_WPAN/ble/mesh/Library --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,6 +1,6 @@
 Middlewares/STM32_WPAN/ble/blesvc/svc_ctl.o: \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/svc/Src/common_blesvc.h \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/ble/svc/Src/common_blesvc.h \
  ../../Middlewares/ST/STM32_WPAN/ble/ble_common.h \
  ../../STM32_WPAN/app/ble_conf.h ../../Core/Inc/app_conf.h \
  ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/hw.h \
@@ -121,7 +121,7 @@ Middlewares/STM32_WPAN/ble/blesvc/svc_ctl.o: \
  ../../Middlewares/ST/STM32_WPAN/ble/svc/Inc/svc_ctl.h \
  ../../Middlewares/ST/STM32_WPAN/ble/svc/Inc/uuid.h \
  ../../Middlewares/ST/STM32_WPAN/utilities/dbg_trace.h
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/svc/Src/common_blesvc.h:
+D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/ble/svc/Src/common_blesvc.h:
 ../../Middlewares/ST/STM32_WPAN/ble/ble_common.h:
 ../../STM32_WPAN/app/ble_conf.h:
 ../../Core/Inc/app_conf.h:

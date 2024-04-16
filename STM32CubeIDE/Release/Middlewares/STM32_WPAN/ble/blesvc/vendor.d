@@ -1,5 +1,5 @@
 Middlewares/STM32_WPAN/ble/blesvc/vendor.o: \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/mesh/MeshModel/Src/vendor.c \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/ble/mesh/MeshModel/Src/vendor.c \
  ../../STM32_WPAN/app/hal_common.h ../../STM32_WPAN/app/user_if.h \
  ../../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h \
  ../../Core/Inc/stm32wbxx_hal_conf.h \

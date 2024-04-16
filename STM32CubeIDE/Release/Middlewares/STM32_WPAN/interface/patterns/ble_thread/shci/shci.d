@@ -1,11 +1,11 @@
 Middlewares/STM32_WPAN/interface/patterns/ble_thread/shci/shci.o: \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/shci/shci.c \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/shci/shci.c \
  ../../Middlewares/ST/STM32_WPAN/stm32_wpan_common.h \
  ../../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl.h \
  ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/tl.h \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/shci/shci.h \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/shci/shci.h \
  ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/mbox_def.h \
  ../../Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wbxx.h \
  ../../Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h \
@@ -62,7 +62,7 @@ Middlewares/STM32_WPAN/interface/patterns/ble_thread/shci/shci.o: \
 ../../Drivers/CMSIS/Include/cmsis_gcc.h:
 ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl.h:
 ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/tl.h:
-C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/shci/shci.h:
+D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/shci/shci.h:
 ../../Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/mbox_def.h:
 ../../Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wbxx.h:
 ../../Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h:

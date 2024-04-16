@@ -1,75 +1,75 @@
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:681:13:HAL_UART_MspInit	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2692:13:HAL_UARTEx_RxEventCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3654:13:UART_EndTxTransfer	0	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3670:13:UART_EndRxTransfer	8	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3696:13:UART_DMATransmitCplt	0	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3730:13:UART_DMATxHalfCplt	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3748:13:UART_DMAReceiveCplt	0	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3809:13:UART_DMARxHalfCplt	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3847:13:UART_DMAError	8	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3887:13:UART_DMAAbortOnError	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3910:13:UART_DMATxAbortCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3965:13:UART_DMARxAbortCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4017:13:UART_DMATxOnlyAbortCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4050:13:UART_DMARxOnlyAbortCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4250:13:UART_RxISR_8BIT	0	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4350:13:UART_RxISR_16BIT	0	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4452:13:UART_RxISR_8BIT_FIFOEN	48	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4623:13:UART_RxISR_16BIT_FIFOEN	48	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4083:13:UART_TxISR_8BIT.part.0	0	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4083:13:UART_TxISR_8BIT	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4112:13:UART_TxISR_16BIT	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4144:13:UART_TxISR_8BIT_FIFOEN	8	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4184:13:UART_TxISR_16BIT_FIFOEN	8	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2675:13:HAL_UART_AbortReceiveCpltCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:696:13:HAL_UART_MspDeInit	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2570:13:HAL_UART_TxCpltCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2585:13:HAL_UART_TxHalfCpltCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2600:13:HAL_UART_RxCpltCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2615:13:HAL_UART_RxHalfCpltCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2630:13:HAL_UART_ErrorCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2645:13:HAL_UART_AbortCpltCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2660:13:HAL_UART_AbortTransmitCpltCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:630:19:HAL_UART_DeInit	8	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:732:19:HAL_UART_RegisterCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:860:19:HAL_UART_UnRegisterCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:965:19:HAL_UART_RegisterRxEventCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1002:19:HAL_UART_UnRegisterRxEventCallback	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1304:19:HAL_UART_Transmit_IT	8	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1422:19:HAL_UART_Transmit_DMA	24	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1537:19:HAL_UART_DMAPause	0	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1567:19:HAL_UART_DMAResume	0	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1598:19:HAL_UART_DMAStop	16	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1673:19:HAL_UART_Abort	8	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1776:19:HAL_UART_AbortTransmit	8	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1835:19:HAL_UART_AbortReceive	8	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1903:19:HAL_UART_Abort_IT	16	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2056:19:HAL_UART_AbortTransmit_IT	8	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2147:19:HAL_UART_AbortReceive_IT	8	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2240:6:HAL_UART_IRQHandler	24	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2740:6:HAL_UART_ReceiverTimeout_Config	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2760:19:HAL_UART_EnableReceiverTimeout	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2822:19:HAL_UART_DisableReceiverTimeout	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2924:6:HAL_MultiProcessor_EnterMuteMode	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2934:19:HAL_HalfDuplex_EnableTransmitter	8	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2957:19:HAL_HalfDuplex_EnableReceiver	8	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2981:19:HAL_LIN_SendBreak	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3026:23:HAL_UART_GetState	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3042:10:HAL_UART_GetError	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3064:6:UART_InitCallbacksToDefault	0	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3088:19:UART_SetConfig	16	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3314:6:UART_AdvFeatureConfig	8	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3457:19:UART_WaitOnFlagUntilTimeout	32	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1130:19:HAL_UART_Transmit	40	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1220:19:HAL_UART_Receive	40	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3388:19:UART_CheckIdleState	32	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:309:19:HAL_UART_Init	8	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:386:19:HAL_HalfDuplex_Init	8	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:459:19:HAL_LIN_Init	16	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:556:19:HAL_MultiProcessor_Init	16	static
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2884:19:HAL_MultiProcessor_EnableMuteMode	0	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2904:19:HAL_MultiProcessor_DisableMuteMode	0	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3525:19:UART_Start_Receive_IT	12	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1372:19:HAL_UART_Receive_IT	8	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3597:19:UART_Start_Receive_DMA	16	static,ignoring_inline_asm
-C:/STM/workspace/BLE_MeshLightingPRFNode/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1492:19:HAL_UART_Receive_DMA	8	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:681:13:HAL_UART_MspInit	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2692:13:HAL_UARTEx_RxEventCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3654:13:UART_EndTxTransfer	0	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3670:13:UART_EndRxTransfer	8	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3696:13:UART_DMATransmitCplt	0	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3730:13:UART_DMATxHalfCplt	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3748:13:UART_DMAReceiveCplt	0	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3809:13:UART_DMARxHalfCplt	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3847:13:UART_DMAError	16	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3887:13:UART_DMAAbortOnError	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3910:13:UART_DMATxAbortCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3965:13:UART_DMARxAbortCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4017:13:UART_DMATxOnlyAbortCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4050:13:UART_DMARxOnlyAbortCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4250:13:UART_RxISR_8BIT	0	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4350:13:UART_RxISR_16BIT	0	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4452:13:UART_RxISR_8BIT_FIFOEN	48	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4623:13:UART_RxISR_16BIT_FIFOEN	48	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4083:13:UART_TxISR_8BIT.part.0	0	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4083:13:UART_TxISR_8BIT	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4112:13:UART_TxISR_16BIT	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4144:13:UART_TxISR_8BIT_FIFOEN	8	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:4184:13:UART_TxISR_16BIT_FIFOEN	8	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2675:13:HAL_UART_AbortReceiveCpltCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:696:13:HAL_UART_MspDeInit	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2570:13:HAL_UART_TxCpltCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2585:13:HAL_UART_TxHalfCpltCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2600:13:HAL_UART_RxCpltCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2615:13:HAL_UART_RxHalfCpltCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2630:13:HAL_UART_ErrorCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2645:13:HAL_UART_AbortCpltCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2660:13:HAL_UART_AbortTransmitCpltCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:630:19:HAL_UART_DeInit	8	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:732:19:HAL_UART_RegisterCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:860:19:HAL_UART_UnRegisterCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:965:19:HAL_UART_RegisterRxEventCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1002:19:HAL_UART_UnRegisterRxEventCallback	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1304:19:HAL_UART_Transmit_IT	8	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1422:19:HAL_UART_Transmit_DMA	24	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1537:19:HAL_UART_DMAPause	0	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1567:19:HAL_UART_DMAResume	0	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1598:19:HAL_UART_DMAStop	16	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1673:19:HAL_UART_Abort	8	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1776:19:HAL_UART_AbortTransmit	8	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1835:19:HAL_UART_AbortReceive	8	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1903:19:HAL_UART_Abort_IT	16	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2056:19:HAL_UART_AbortTransmit_IT	8	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2147:19:HAL_UART_AbortReceive_IT	8	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2240:6:HAL_UART_IRQHandler	24	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2740:6:HAL_UART_ReceiverTimeout_Config	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2760:19:HAL_UART_EnableReceiverTimeout	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2822:19:HAL_UART_DisableReceiverTimeout	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2924:6:HAL_MultiProcessor_EnterMuteMode	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2934:19:HAL_HalfDuplex_EnableTransmitter	8	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2957:19:HAL_HalfDuplex_EnableReceiver	8	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2981:19:HAL_LIN_SendBreak	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3026:23:HAL_UART_GetState	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3042:10:HAL_UART_GetError	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3064:6:UART_InitCallbacksToDefault	0	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3088:19:UART_SetConfig	16	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3314:6:UART_AdvFeatureConfig	8	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3457:19:UART_WaitOnFlagUntilTimeout	32	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1130:19:HAL_UART_Transmit	40	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1220:19:HAL_UART_Receive	40	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3388:19:UART_CheckIdleState	32	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:309:19:HAL_UART_Init	8	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:386:19:HAL_HalfDuplex_Init	8	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:459:19:HAL_LIN_Init	16	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:556:19:HAL_MultiProcessor_Init	16	static
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2884:19:HAL_MultiProcessor_EnableMuteMode	0	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:2904:19:HAL_MultiProcessor_DisableMuteMode	0	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3525:19:UART_Start_Receive_IT	12	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1372:19:HAL_UART_Receive_IT	8	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:3597:19:UART_Start_Receive_DMA	16	static,ignoring_inline_asm
+D:/Research Projects/Occupancy/LESA_OccupancyUnit/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c:1492:19:HAL_UART_Receive_DMA	8	static,ignoring_inline_asm

@@ -1,5 +1,5 @@
 Middlewares/STM32_WPAN/ble/blesvc/light_lc.o: \
- C:/STM/workspace/BLE_MeshLightingPRFNode/Middlewares/ST/STM32_WPAN/ble/mesh/MeshModel/Src/light_lc.c \
+ D:/Research\ Projects/Occupancy/LESA_OccupancyUnit/Middlewares/ST/STM32_WPAN/ble/mesh/MeshModel/Src/light_lc.c \
  ../../Middlewares/ST/STM32_WPAN/ble/core/template/ble_const.h \
  ../../Middlewares/ST/STM32_WPAN/ble/core/ble_std.h \
  ../../Middlewares/ST/STM32_WPAN/ble/core/ble_defs.h \
