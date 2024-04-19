@@ -1,0 +1,6 @@
+../Drivers/BSP/vl53l8cx/modules/platform.c:15:9:RdByte	32	static
+../Drivers/BSP/vl53l8cx/modules/platform.c:23:9:WrByte	24	static
+../Drivers/BSP/vl53l8cx/modules/platform.c:31:9:WrMulti	32	static
+../Drivers/BSP/vl53l8cx/modules/platform.c:40:9:RdMulti	32	static
+../Drivers/BSP/vl53l8cx/modules/platform.c:49:6:SwapBuffer	24	static
+../Drivers/BSP/vl53l8cx/modules/platform.c:68:9:WaitMs	24	static

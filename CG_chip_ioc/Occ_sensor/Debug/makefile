@@ -14,6 +14,10 @@ RM := rm -rf
 -include Middlewares/ST/STM32_USB_Device_Library/Core/Src/subdir.mk
 -include Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/subdir.mk
 -include Drivers/STM32WBxx_HAL_Driver/Src/subdir.mk
+-include Drivers/BSP/vl53l8cx/porting/subdir.mk
+-include Drivers/BSP/vl53l8cx/modules/subdir.mk
+-include Drivers/BSP/vl53l8cx/subdir.mk
+-include Drivers/BSP/TCS3430/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include objects.mk
@@ -64,8 +68,8 @@ all: main-build
 main-build: Occ_sensor.elf secondary-outputs
 
 # Tool invocations
-Occ_sensor.elf Occ_sensor.map: $(OBJS) $(USER_OBJS) C:\Users\Ecnei\STM32CubeIDE\workspace_1.14.1\Occ_sensor\STM32WB55CGUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Occ_sensor.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Ecnei\STM32CubeIDE\workspace_1.14.1\Occ_sensor\STM32WB55CGUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Occ_sensor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Occ_sensor.elf Occ_sensor.map: $(OBJS) $(USER_OBJS) D:\Research\ Projects\Occupancy\LESA_OccupancyUnit\CG_chip_ioc\Occ_sensor\STM32WB55CGUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Occ_sensor.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Research Projects\Occupancy\LESA_OccupancyUnit\CG_chip_ioc\Occ_sensor\STM32WB55CGUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Occ_sensor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

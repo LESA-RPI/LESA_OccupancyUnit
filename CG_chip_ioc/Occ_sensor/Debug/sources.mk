@@ -24,6 +24,10 @@ C_DEPS :=
 SUBDIRS := \
 Core/Src \
 Core/Startup \
+Drivers/BSP/TCS3430 \
+Drivers/BSP/vl53l8cx/modules \
+Drivers/BSP/vl53l8cx/porting \
+Drivers/BSP/vl53l8cx \
 Drivers/STM32WBxx_HAL_Driver/Src \
 Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src \
 Middlewares/ST/STM32_USB_Device_Library/Core/Src \
