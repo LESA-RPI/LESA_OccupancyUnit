@@ -43,7 +43,20 @@ USB_Device/App/usbd_cdc_if.o: ../USB_Device/App/usbd_cdc_if.c \
  ../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_system.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
- ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+ ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
+ ../Drivers/BSP/TCS3430/TCS3430.h ../Core/Inc/stm32wbxx_nucleo_bus.h \
+ ../Core/Inc/stm32wbxx_nucleo_conf.h ../Core/Inc/stm32wbxx_nucleo_errno.h \
+ ../Core/Inc/app_tof.h ../Core/Inc/custom_ranging_sensor.h \
+ ../Core/Inc/custom_tof_conf.h ../Core/Inc/stm32wbxx_nucleo_bus.h \
+ ../Core/Inc/ranging_sensor.h ../Drivers/BSP/vl53l8cx/vl53l8cx.h \
+ ../Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h \
+ ../Drivers/BSP/vl53l8cx/modules/platform.h \
+ ../Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h \
+ ../Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h \
+ ../Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h \
+ ../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_nucleo.h \
+ ../Core/Inc/stm32wbxx_nucleo_errno.h \
+ ../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h
 ../USB_Device/App/usbd_cdc_if.h:
 ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:
 ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
@@ -89,3 +102,21 @@ USB_Device/App/usbd_cdc_if.o: ../USB_Device/App/usbd_cdc_if.c \
 ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
 ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
 ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h:
+../Drivers/BSP/TCS3430/TCS3430.h:
+../Core/Inc/stm32wbxx_nucleo_bus.h:
+../Core/Inc/stm32wbxx_nucleo_conf.h:
+../Core/Inc/stm32wbxx_nucleo_errno.h:
+../Core/Inc/app_tof.h:
+../Core/Inc/custom_ranging_sensor.h:
+../Core/Inc/custom_tof_conf.h:
+../Core/Inc/stm32wbxx_nucleo_bus.h:
+../Core/Inc/ranging_sensor.h:
+../Drivers/BSP/vl53l8cx/vl53l8cx.h:
+../Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h:
+../Drivers/BSP/vl53l8cx/modules/platform.h:
+../Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_xtalk.h:
+../Drivers/BSP/vl53l8cx/modules/vl53l8cx_api.h:
+../Drivers/BSP/vl53l8cx/modules/vl53l8cx_plugin_detection_thresholds.h:
+../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_nucleo.h:
+../Core/Inc/stm32wbxx_nucleo_errno.h:
+../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h:

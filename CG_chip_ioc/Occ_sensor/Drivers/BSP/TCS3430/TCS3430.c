@@ -11,8 +11,10 @@
 #include "app_tof.h"
 #include "stm32wbxx_nucleo_bus.h"
 
+
 tcs3430 sensor = { {0}, {0} };
 tcs3430_optics_val XYZ_data;
+tcs3430_optics_val color_data;
 int32_t ret;
 int16_t interruptrange = 255;
 
@@ -400,8 +402,16 @@ void TCS3430_print_color(const tcs3430_optics_val *color_data) {
      */
 
     /* formatting the data to left aligned, zero decimal, width of eight floats */
-    printf( """\n\r|X\t|Y\t|Z\t|IR\t|LUX\t|CCT\t|\n\r|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|\r\n",
-    		color_data->X, color_data->Y, color_data->Z, color_data->IR, color_data->Lux, color_data->CCT);//*/
+//    printf( """\n\r|X\t|Y\t|Z\t|IR\t|LUX\t|CCT\t|\n\r|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|\r\n",
+//    		color_data->X, color_data->Y, color_data->Z, color_data->IR, color_data->Lux, color_data->CCT);//*/
+	char buf[256];
+
+    sprintf(buf, "\n\r|X\t|Y\t|Z\t|IR\t|LUX\t|CCT\t|\n\r|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|\r\n",
+            color_data->X, color_data->Y, color_data->Z, color_data->IR, color_data->Lux, color_data->CCT);
+
+	  uint16_t len = sizeof(buf) - 1;
+
+	  CDC_Transmit_FS((uint8_t*)buf, len);
 
 	//printf("%x|%x|%x|",color_data->X, color_data->Y, color_data->Z );
 	//fflush(stdout);

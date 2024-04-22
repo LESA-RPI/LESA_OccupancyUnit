@@ -58,7 +58,7 @@ static int32_t convert_data_format(VL53L8CX_Object_t *pObj,
     VL53L8CX_ResultsData *data, RANGING_SENSOR_Result_t *pResult);
 #endif
 static void MX_VL53L8CX_SimpleRanging_Init(void);
-static void MX_VL53L8CX_SimpleRanging_Process(void);
+//static void MX_VL53L8CX_SimpleRanging_Process(void);
 static void toggle_resolution(void);
 static void toggle_signal_and_ambient(void);
 static void clear_screen(void);
@@ -78,7 +78,7 @@ void MX_TOF_Init(void)
   /* USER CODE END TOF_Init_PreTreatment */
 
   /* Initialize the peripherals and the TOF components */
-  TRACE_M(TF_SENSOR, "CUSTOM_RANGING_SENSOR_Init");
+//  TRACE_M(TF_SENSOR, "CUSTOM_RANGING_SENSOR_Init");
   MX_VL53L8CX_SimpleRanging_Init();
 
   uint32_t Id;
@@ -337,20 +337,20 @@ static void handle_cmd(uint8_t cmd)
       break;
   }
 }
-
-static uint8_t get_key(void)
-{
-  uint8_t cmd = 0;
-
-  HAL_UART_Receive(&hcom_uart[COM1], &cmd, 1, HAL_MAX_DELAY);
-
-  return cmd;
-}
-
-static uint32_t com_has_data(void)
-{
-  return __HAL_UART_GET_FLAG(&hcom_uart[COM1], UART_FLAG_RXNE);;
-}
+//
+//static uint8_t get_key(void)
+//{
+//  uint8_t cmd = 0;
+//
+//  HAL_UART_Receive(&hcom_uart[COM1], &cmd, 1, HAL_MAX_DELAY);
+//
+//  return cmd;
+//}
+//
+//static uint32_t com_has_data(void)
+//{
+//  return __HAL_UART_GET_FLAG(&hcom_uart[COM1], UART_FLAG_RXNE);;
+//}
 
 #ifdef USE_BARE_DRIVER
 static uint8_t map_target_status(uint8_t status)

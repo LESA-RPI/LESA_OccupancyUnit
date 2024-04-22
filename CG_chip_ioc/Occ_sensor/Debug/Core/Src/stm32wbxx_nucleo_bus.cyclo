@@ -1,0 +1,2 @@
+../Core/Src/stm32wbxx_nucleo_bus.c:392:9:BSP_GetTick	1
+../Core/Src/stm32wbxx_nucleo_bus.c:398:26:MX_I2C1_Init	4

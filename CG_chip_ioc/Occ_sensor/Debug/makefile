@@ -14,7 +14,6 @@ RM := rm -rf
 -include Middlewares/ST/STM32_USB_Device_Library/Core/Src/subdir.mk
 -include Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/subdir.mk
 -include Drivers/STM32WBxx_HAL_Driver/Src/subdir.mk
--include Drivers/BSP/vl53l8cx/porting/subdir.mk
 -include Drivers/BSP/vl53l8cx/modules/subdir.mk
 -include Drivers/BSP/vl53l8cx/subdir.mk
 -include Drivers/BSP/TCS3430/subdir.mk

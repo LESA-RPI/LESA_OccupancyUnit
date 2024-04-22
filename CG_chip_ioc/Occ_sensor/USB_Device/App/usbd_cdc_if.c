@@ -20,6 +20,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "usbd_cdc_if.h"
+#include "TCS3430.h"
 
 /* USER CODE BEGIN INCLUDE */
 
@@ -94,7 +95,7 @@ uint8_t UserRxBufferFS[APP_RX_DATA_SIZE];
 uint8_t UserTxBufferFS[APP_TX_DATA_SIZE];
 
 /* USER CODE BEGIN PRIVATE_VARIABLES */
-
+tcs3430_optics_val color_data;
 /* USER CODE END PRIVATE_VARIABLES */
 
 /**
@@ -262,23 +263,27 @@ static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
 {
   /* USER CODE BEGIN 6 */
 
-//	  if(Buf[0] == '1')
-//	  {
+	  if(Buf[0] == '1')
+	  {
+		  tcs3430 sensor = {{0},{0}};
+		  TCS3430_print_reg(&sensor);
+		  color_data = get_raw_XYZ(&sensor);
+		  TCS3430_print_color(&color_data);
 //		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 1);
 //		  char buf[] = "Received";
 //		  uint16_t len = sizeof(buf) - 1;
 //
 //		  CDC_Transmit_FS((uint8_t*)buf, len);
-//
-//	  }else if(Buf[0] == '0')
-//	  {
-//		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 0);
-//		  char buf[] = "Received";
-//		  uint16_t len = sizeof(buf) - 1;
-//
-//		  CDC_Transmit_FS((uint8_t*)buf, len);
-//
-//	  }
+
+	  }else if(Buf[0] == '0')
+	  {
+		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 0);
+		  char buf[] = "Received";
+		  uint16_t len = sizeof(buf) - 1;
+
+		  CDC_Transmit_FS((uint8_t*)buf, len);
+
+	  }
 
   USBD_CDC_SetRxBuffer(&hUsbDeviceFS, &Buf[0]);
   USBD_CDC_ReceivePacket(&hUsbDeviceFS);
