@@ -1,0 +1,6 @@
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c:120:13:DbgTraceGetFileName	3
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c:145:6:DbgTraceBuffer	2
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c:166:13:DbgTrace_TxCpltCallback	2
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c:205:6:DbgTraceInit	1
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c:227:8:_write	1
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c:254:8:DbgTraceWrite	7

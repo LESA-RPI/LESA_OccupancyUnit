@@ -1,0 +1,9 @@
+../Application/User/Core/app_tof.c:64:6:MX_TOF_Init	16	static
+../Application/User/Core/app_tof.c:96:6:MX_TOF_Begin	8	static
+../Application/User/Core/app_tof.c:99:6:MX_TOF_Stop	8	static
+../Application/User/Core/app_tof.c:118:13:MX_VL53L8CX_SimpleRanging_Init	8	static
+../Application/User/Core/app_tof.c:158:6:MX_TOF_ToggleReso	8	static
+../Application/User/Core/app_tof.c:164:6:parse_TOF_result	24	static
+../Application/User/Core/app_tof.c:177:12:print_result	24	static
+../Application/User/Core/app_tof.c:289:13:toggle_resolution	8	static
+../Application/User/Core/app_tof.c:319:13:toggle_signal_and_ambient	8	static

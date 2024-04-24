@@ -1,0 +1,10 @@
+../../../../../../../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h:539:22:LL_AHB2_GRP1_EnableClock	1
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:185:10:BSP_GetVersion	1
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:203:6:BSP_LED_Init	1
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:232:6:BSP_LED_DeInit	1
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:252:6:BSP_LED_On	1
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:266:6:BSP_LED_Off	1
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:280:6:BSP_LED_Toggle	1
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:307:6:BSP_PB_Init	7
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:351:6:BSP_PB_DeInit	1
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:369:10:BSP_PB_GetState	1
