@@ -1,0 +1,17 @@
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:75:6:NMI_Handler	4	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:88:6:HardFault_Handler	4	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:103:6:MemManage_Handler	4	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:118:6:BusFault_Handler	4	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:133:6:UsageFault_Handler	4	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:148:6:SVC_Handler	4	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:161:6:DebugMon_Handler	4	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:174:6:PendSV_Handler	4	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:187:6:SysTick_Handler	8	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:208:6:RTC_WKUP_IRQHandler	8	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:222:6:USB_LP_IRQHandler	8	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:236:6:IPCC_C1_RX_IRQHandler	8	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:250:6:IPCC_C1_TX_IRQHandler	8	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:264:6:HSEM_IRQHandler	8	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:282:6:EXTI4_IRQHandler	8	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:293:6:EXTI0_IRQHandler	8	static
+D:/version1/stm32cube_fw_wb_v1180/STM32Cube_FW_WB_V1.18.0/Projects/P-NUCLEO-WB55.Nucleo/Applications/BLE/BLE_p2pServer/Core/Src/stm32wbxx_it.c:304:6:EXTI1_IRQHandler	8	static
